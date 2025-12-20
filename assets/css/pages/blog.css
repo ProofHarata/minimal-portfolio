@@ -1,0 +1,452 @@
+/*  =============================================================================
+    BLOG PAGE STYLESHEET
+    =============================================================================
+    This CSS file contains styles specific to the blog page.
+    - Header Section: Styles for the page header with breadcrumbs.
+    - Blog Section: Layout and components for blog posts, including pagination and loading spinner.
+    - Responsive: Adjustments for mobile and tablet views.
+
+    For customization:
+    - Edit variables in style.css for global changes.
+    - Adjust font sizes and spacing in responsive sections for better mobile experience.
+    ============================================================================= */
+
+/*  -----------------------------------------------------------------------------
+    HEADER SECTION
+    ----------------------------------------------------------------------------- */
+.header {
+    display: flex;
+    min-height: 60vh;
+    overflow-y: hidden;
+    text-align: center;
+    padding: 5rem 1rem;
+    position: relative;
+    align-items: center;
+    transition: background 0.3s ease;
+    animation: fadeIn 1.5s ease forwards;
+    background: linear-gradient(135deg, var(--accent, #ff6b6b) 0%, var(--border, #4ecdc4) 90%);
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.header-container {
+    gap: 2rem;
+    display: flex;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.05em;
+}
+
+.breadcrumb {
+    display: flex;
+    text-align: center;
+    margin-top: 0.5rem;
+    justify-content: center;
+}
+
+.breadcrumb ul {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.breadcrumb li a {
+    opacity: 0.7;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.breadcrumb li a:hover {
+    opacity: 1;
+}
+
+.breadcrumb .separator {
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+/*  -----------------------------------------------------------------------------
+    BLOG SECTION
+    ----------------------------------------------------------------------------- */
+.blog {
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.blog-item {
+    display: flex;
+    overflow: hidden;
+    align-items: stretch;
+    transition: box-shadow 0.3s ease;
+}
+
+.blog-item:hover .blog-image img {
+    transform: scale(1.04);
+}
+
+.blog-item .blog-link {
+    flex: 1.2;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-content {
+    flex: 1;
+    padding: 1.5rem 0 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+}
+
+.blog-category {
+    display: inline-block;
+    background-color: var(--border);
+    color: var(--secondary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    align-self: flex-start;
+}
+
+.blog-date {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+.blog-title {
+    margin-bottom: 0.75rem;
+}
+
+.blog-title a {
+    font-weight: bold;
+    font-size: 1.9rem;
+    color: var(--text);
+    transition: color 0.3s ease;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.blog-title a:hover {
+    color: var(--accent);
+}
+
+.blog-description {
+    color: var(--muted);
+    flex-grow: 1;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.blog-content .author-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-content .blog-author {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-top: auto;
+}
+
+.blog-content .author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url('../../images/user.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-item:nth-child(2) .author-avatar {
+    background-image: url('../../images/user.png');
+}
+
+.blog-item:nth-child(3) .author-avatar {
+    background-image: url('../../images/user.png');
+}
+
+.blog-content .author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-content .author-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--secondary);
+    transition: color 0.3s ease;
+}
+
+.blog-content .author-name:hover {
+    color: var(--accent);
+}
+
+.blog-content .author-job {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+/*  -----------------------------------------------------------------------------
+    PAGINATION
+    ----------------------------------------------------------------------------- */
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.page-pagination {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.page-pagination li {
+    display: flex;
+}
+
+.page-numbers {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--text);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    min-width: 2.5rem; /* Ensure consistent width for numbers */
+}
+
+.page-numbers:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+}
+
+.page-numbers.current {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.next {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--text);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    min-width: 2.5rem; /* Ensure consistent width for numbers */
+}
+
+.next:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+}
+
+/*  -----------------------------------------------------------------------------
+    LOADING SPINNER
+    ----------------------------------------------------------------------------- */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--border);
+    border-top: 5px solid var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*  -----------------------------------------------------------------------------
+    RESPONSIVE ADJUSTMENTS
+    ----------------------------------------------------------------------------- */
+
+/* Header Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 3rem 1rem;
+        min-height: 50vh;
+    }
+    .header-container h2 {
+        font-size: clamp(1.5rem, 6vw, 2.5rem); /* Reduced max size for mobile */
+    }
+    .breadcrumb ul {
+        gap: 0.25rem;
+    }
+}
+
+/* Blog and Pagination Responsive */
+@media (max-width: 768px) {
+    .blog {
+        padding: 1.5rem 1rem;
+    }
+    .blog-item {
+        flex-direction: column;
+    }
+    .blog-image {
+        flex: none;
+        width: 100%;
+        min-height: 200px; /* Adjusted for better proportion */
+    }
+    .blog-content {
+        padding: 1rem;
+        flex: none;
+    }
+    .blog-title a {
+        font-size: 1.4rem; /* Smaller title on mobile */
+    }
+    .blog-description {
+        font-size: 1rem; /* Smaller description */
+    }
+    .blog-content .author-avatar {
+        width: 40px; /* Smaller avatar on mobile */
+        height: 40px;
+    }
+    .blog-content .author-name {
+        font-size: 1.1rem; /* Smaller author name */
+    }
+    .blog-content .author-job {
+        font-size: 0.8rem; /* Smaller job title */
+    }
+    .page-pagination {
+        gap: 0.25rem;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .page-numbers {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        min-width: 2rem;
+    }
+}
+
+/* Additional Mobile Breakpoint */
+@media (max-width: 480px) {
+    .header-container h2 {
+        font-size: clamp(1.2rem, 5vw, 2rem); /* Even smaller for very small screens */
+    }
+    .blog-title a {
+        font-size: 1.2rem;
+    }
+    .blog-description {
+        font-size: 0.9rem;
+    }
+    .blog-content .author-avatar {
+        width: 35px; /* Even smaller avatar */
+        height: 35px;
+    }
+    .blog-content .author-name {
+        font-size: 1rem;
+    }
+    .blog-content .author-job {
+        font-size: 0.7rem;
+    }
+    .page-link {
+        font-size: 0.8rem;
+    }
+}
+
+/*  =============================================================================
+    END OF BLOG STYLESHEET
+    =============================================================================
+    For global responsive styles, see globalresponsive.css.
+    ============================================================================= */
