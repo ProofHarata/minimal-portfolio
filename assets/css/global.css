@@ -1,22 +1,10 @@
-/*  =============================================================================
-    PORTFOLIO TEMPLATE STYLESHEET
-    =============================================================================
-    This CSS file contains global styles for the portfolio template.
-    - Fonts: Custom font faces for typography.
-    - Variables: CSS custom properties for easy theming (change colors here).
-    - General Styles: Reset and base styles.
-    - Components: Reusable styles for buttons, social media, navbar, etc.
-    - Footer: Site-wide footer styles.
+/*  =====================================================
+    GLOBAL STYLES
+    This file contains base styles used across the website.
+    Includes variables, reset, typography, and common elements.
+===================================================== */
 
-    For customization:
-    - Edit :root variables to change colors, fonts, etc.
-    - Use [data-theme="dark"] for dark mode support.
-    - This template is optimized for Envato marketplaces. Ensure compatibility with modern browsers.
-   ============================================================================= */
-
-/* -----------------------------------------------------------------------------
-    FONTS
-   ----------------------------------------------------------------------------- */
+/* ---------- FONTS ---------- */
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/inter/inter-v20-latin-regular.woff2') format('woff2');
@@ -43,9 +31,8 @@
     src: url('../fonts/dm-sans/dm-sans-v17-latin-regular.woff2') format('woff2');
 }
 
-/*  -----------------------------------------------------------------------------
-    CSS CUSTOM PROPERTIES (VARIABLES)
-    ----------------------------------------------------------------------------- */
+/* ---------- CSS CUSTOM PROPERTIES (VARIABLES) ---------- */
+
 /* Light mode defaults. Customize these for global color changes. */
 :root {
     --primary: #2563eb;        /* Primary color (e.g., links, buttons) */
@@ -76,10 +63,9 @@
     --border: #1e293b;         /* Dark mode border */
 }
 
-/*  -----------------------------------------------------------------------------
-    GENERAL STYLES
-    ----------------------------------------------------------------------------- */
-/* Reset and base styles for consistent rendering. */
+/* ---------- GENERAL STYLES ---------- */
+
+/* Reset & Base */
 *, html, body {
     margin: 0;
     padding: 0;
@@ -89,6 +75,7 @@
     box-sizing: border-box;
 }
 
+/* Typography */
 html, body {
     overflow-x: hidden;
     width: 100%;
@@ -101,17 +88,26 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/*  -----------------------------------------------------------------------------
-    REUSABLE COMPONENTS
-    ----------------------------------------------------------------------------- */
+/* ---------- REUSABLE COMPONENTS ---------- */
+
+/* Common Elements */
+section {
+    padding: 5rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 /* Social Media Icons */
-.social-media {
+.social-links {
     display: flex;
     gap: 1rem;
 }
 
-.social-media a {
+.social-links a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +121,7 @@ body {
     text-decoration: none;
 }
 
-.social-media a:hover {
+.social-links a:hover {
     background-color: var(--accent);
     border-color: var(--accent);
     color: var(--background);
@@ -157,10 +153,8 @@ body {
     transform: translateY(-2px);
 }
 
-/*  -----------------------------------------------------------------------------
-    NAVIGATION (NAVBAR)
-    ----------------------------------------------------------------------------- */
-nav.navbar {
+/* ---------- NAVIGATION (NAVBAR) ---------- */
+nav.site-navbar {
     width: 100%;
     height: 80px;
     z-index: 10;
@@ -173,40 +167,41 @@ nav.navbar {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav.navbar.solid {
+nav.site-navbar.solid {
     background-color: var(--background);
     box-shadow: 0px 7px 8px 0px rgba(54, 54, 54, 0.5);
 }
 
 /* Navbar Brand */
-.navbar .navbar-brand {
+.site-navbar .navbar-brand {
     margin: 0 4rem;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
 }
 
-.navbar .navbar-brand img {
+.site-navbar .navbar-brand img {
     width: 40px;
     height: 40px;
+    border-radius: 100%;
     margin-right: 0.5rem;
+    background-color: white;
 }
 
-.navbar .navbar-brand .brand-text {
+.site-navbar .navbar-brand .brand-text {
     margin: auto;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--text);
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Navbar Navigation */
-.navbar .navigation {
+.site-navbar .navbar-menu {
     display: flex;
     align-items: center;
 }
 
-.navbar .navigation ul {
+.site-navbar .navbar-menu ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -214,11 +209,11 @@ nav.navbar.solid {
     transition: transform 0.2s ease;
 }
 
-.navbar .navigation ul li {
+.site-navbar .navbar-menu ul li {
     margin: 0 1rem;
 }
 
-.navbar .navigation ul li a {
+.site-navbar .navbar-menu ul li a {
     font-weight: 700;
     transition: 0.3s;
     font-size: 0.95rem;
@@ -227,25 +222,25 @@ nav.navbar.solid {
     color: var(--text);
 }
 
-nav.navbar .navigation ul li.light a {
+nav.site-navbar .navbar-menu ul li.light a {
     color: var(--primary);
 }
 
-.navbar .navigation ul li a:hover {
+.site-navbar .navbar-menu ul li a:hover {
     color: var(--primary);
 }
 
-.navbar .navigation ul li.active a {
+.site-navbar .navbar-menu ul li.active a {
     color: var(--primary) !important; 
     font-weight: 700;
 }
 
 /* Navbar Theme Toggle */
-.navbar .theme {
+.site-navbar .theme {
     margin: 0 4rem;
 }
 
-.navbar .theme .theme-toggle {
+.site-navbar .theme .theme-toggle {
     background: none;
     border: none;
     font-size: 18px;
@@ -254,27 +249,25 @@ nav.navbar .navigation ul li.light a {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.navbar .theme .theme-toggle .bi {
+.site-navbar .theme .theme-toggle .bi {
     font-size: 1.3rem;
     text-shadow: 0.2px 0 currentColor, -0.2px 0 currentColor;
 }
 
 /* Dark Mode Overrides for Navbar */
-[data-theme="dark"] nav.navbar {
+[data-theme="dark"] nav.site-navbar {
     background-color: transparent;
 }
 
-[data-theme="dark"] nav.navbar .theme-toggle {
+[data-theme="dark"] nav.site-navbar .theme-toggle {
     color: white;
 }
 
-[data-theme="dark"] nav.navbar.solid {
+[data-theme="dark"] nav.site-navbar.solid {
     background-color: var(--background);
 }
 
-/*  -----------------------------------------------------------------------------
-    HAMBURGER MENU (Mobile Navigation)
-    ----------------------------------------------------------------------------- */
+/* Hamburger Menu (Mobile Navigation) */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -290,12 +283,10 @@ nav.navbar .navigation ul li.light a {
     transition: 0.3s;
 }
 
-/*  -----------------------------------------------------------------------------
-    FOOTER
-    ----------------------------------------------------------------------------- */
+/* ---------- FOOTER SECTION ---------- */
 .footer {
     padding: 2rem 1rem;
-    background-color: #1d1d1d; /* Hardcoded for dark footer; customize if needed */
+    background-color: #1d1d1d; 
     text-align: center;
     transition: background-color 0.3s ease;
 }
@@ -311,13 +302,10 @@ nav.navbar .navigation ul li.light a {
 .footer p {
     font-weight: 700;
     font-size: 1rem;
-    color: #f8fafc; /* Hardcoded for contrast; customize if needed */
+    color: #f8fafc; 
     margin: 0;
 }
 
 /*  =============================================================================
-    END OF STYLESHEET
-    =============================================================================
-    For responsive styles, see responsive.css.
-    For page-specific styles, see home.css, services.css, etc.
+    END OF GLOBAL STYLES
     ============================================================================= */

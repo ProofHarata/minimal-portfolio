@@ -12,7 +12,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS (Animate On Scroll) library for scroll animations
     if (typeof AOS !== 'undefined') {
-        AOS.init();
+        AOS.init({
+            once: true,          
+            duration: 700,
+            easing: 'ease-in-out',
+            offset: 120
+        });
     }
 
     // Navbar Solid on Scroll: Adds 'solid' class to navbar when scrolled past 50px
@@ -50,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle Mobile Menu: Toggles active class on navigation and hamburger
     window.toggleMenu = function() {
-        const navigation = document.querySelector('.navigation');
+        const navigation = document.querySelector('.navbar-menu');
         const hamburger = document.querySelector('.hamburger');
         if (navigation) navigation.classList.toggle('active');
         if (hamburger) hamburger.classList.toggle('active');
@@ -74,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             smoothScrollToSection(id);
 
             // Close mobile menu after navigation
-            const navigation = document.querySelector('.navigation');
+            const navigation = document.querySelector('.navbar-menu');
             const hamburger = document.querySelector('.hamburger');
             if (navigation) navigation.classList.remove('active');
             if (hamburger) hamburger.classList.remove('active');

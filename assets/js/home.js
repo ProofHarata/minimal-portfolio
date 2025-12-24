@@ -20,15 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe elements with fade-in or slide-in classes
-    document.querySelectorAll('.fade-in, .slide-in').forEach(function(el) {
-        observer.observe(el);
-    });
-
     // Update Active Link in Navbar: Highlights the current section in the navbar
     function updateActiveLink(activeId) {
         // Remove active and light classes from all list items
-        document.querySelectorAll('.navigation ul li').forEach(function(li) {
+        document.querySelectorAll('.navbar-menu ul li').forEach(function(li) {
             li.classList.remove('active', 'light');
         });
 
@@ -39,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Add active class to the corresponding link
-        const link = document.querySelector(`.navigation a[href="#${target}"]`);
+        const link = document.querySelector(`.navbar-menu a[href="#${target}"]`);
         if (link) {
             link.parentElement.classList.add('active');
             if (target === 'home') {

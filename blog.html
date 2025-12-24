@@ -3,10 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
-    <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
-    <meta name="author" content="Zoyothemes">
+    <meta name="description" content="Responsive Personal Portfolio HTML Template" />
+    <meta name="keywords" content="personal portfolio, html template, responsive portfolio, developer portfolio" />
+    <meta name="author" content="Your Brand" />
     <title>Template - Portfolio</title>
+
+    <!-- Link Favicon -->
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/x-icon">
+
+    <!-- AOS - Animate On Scroll Library -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Icon -->
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" type="text/css">
@@ -19,20 +25,20 @@
 <body>
 
     <!-- Navbar Start -->
-    <nav class="navbar" id="navbar">
+    <nav class="site-navbar" id="navbar">
         <div class="navbar-brand">
-            <img src="assets/images/circular_logo.png" alt="Logo">
-            <h3 class="brand-text">Pin<span>&Piece</span></h3>
+            <img src="assets/logo/logo.png" alt="Logo">
+            <h3 class="brand-text">ProofHarata</h3>
         </div>
-        <div class="navigation">
+        <div class="navbar-menu">
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
-                <li><a href="index.html#services">SERVICES</a></li>
-                <li><a href="index.html#resume">RESUME</a></li>
-                <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#resume">RESUME</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
                 <li class="light"><a href="blog.html">BLOG</a></li>
-                <li><a href="index.html#contact">CONTACT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
         <div class="theme">
@@ -48,12 +54,12 @@
     <!-- Navbar End -->
 
     <!-- Header Section -->
-    <section id="header" class="header">
+    <section id="header" class="page-header">
         <div class="container">
-            <div class="header-container">
-                <div class="header-text">
+            <div class="page-header-wrapper">
+                <div class="page-header-content">
                     <h2>Blog Post</h2>
-                    <nav class="breadcrumb">
+                    <nav class="breadcrumb-nav">
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li class="separator">></li>
@@ -69,32 +75,30 @@
     <!-- Blog Section -->
     <section id="blog" class="blog">
         <div class="container">
-            <div class="loading-spinner" id="loading-spinner" style="display: none;">
-                <div class="spinner"></div>
-            </div>
             <div class="blog-list">
+
                 <!-- Blog Item 1 -->
-                <article class="blog-item">
+                <article class="blog-card" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100" data-aos-easing="ease-in-out">
                     <a href="blog-single.html" class="blog-link">
-                        <div class="blog-image">
-                            <img src="assets/images/blog-1.jpg" alt="Blog Post 1">
+                        <div class="blog-thumbnail">
+                            <img src="assets/images/demo/blog-1.jpg" alt="Blog Post 1">
                         </div>
                     </a>
-                    <div class="blog-content">
-                        <span class="blog-category">Startup Business</span>
+                    <div class="blog-body">
+                        <span class="blog-category">Web Development</span>
                         <time class="blog-date" datetime="2023-01-15">January 15, 2023</time>
-                        <h3 class="blog-title">
-                            <a href="blog-single.html" class="blog-link">How to hack your Virtual Reality Life for Max Efficiency!</a>
+                        <h3 class="blog-heading">
+                            <a href="blog-single.html" class="blog-link">Building a Modern Portfolio Website</a>
                         </h3>
-                        <p class="blog-description">Explore the latest trends in web design that are shaping the future of digital experiences, from minimalism to interactive elements.</p>
+                        <p class="blog-description">A practical guide to creating a clean and professional portfolio website using modern web design principles.</p>
                         <a href="#" class="author-link">
                             <div class="blog-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/user.png" alt="John Doe Profile"> 
+                                <div class="blog-author-avatar">
+                                    <img src="assets/images/demo/user.png" alt="Alex Morgan Profile"> 
                                 </div>
-                                <div class="author-info">
-                                    <p class="author-name">John Doe</p>
-                                    <p class="author-job">Web Designer</p>
+                                <div class="blog-author-info">
+                                    <p class="blog-author-name">Alex Morgan</p>
+                                    <p class="blog-author-role">Frontend Developer & Technical Writer</p>
                                 </div>
                             </div>
                         </a>
@@ -102,27 +106,27 @@
                 </article>
                 
                 <!-- Blog Item 2 -->
-                <article class="blog-item">
+                <article class="blog-card" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100" data-aos-easing="ease-in-out">
                     <a href="#" class="blog-link">
-                        <div class="blog-image">
-                            <img src="assets/images/blog-2.jpg" alt="Blog Post 2">
+                        <div class="blog-thumbnail">
+                            <img src="assets/images/demo/blog-2.jpg" alt="Blog Post 2">
                         </div>
                     </a>
-                    <div class="blog-content">
-                        <span class="blog-category">Marketing</span>
+                    <div class="blog-body">
+                        <span class="blog-category">UI/UX Design</span>
                         <time class="blog-date" datetime="2023-02-20">February 20, 2023</time>
-                        <h3 class="blog-title">
-                            <a href="#" class="blog-link">The Importance of Responsive Design</a>
+                        <h3 class="blog-heading">
+                            <a href="#" class="blog-link">UI/UX Design Principles Every Designer Should Know</a>
                         </h3>
-                        <p class="blog-description">Learn why responsive design is crucial for reaching audiences on all devices and how it impacts user engagement.</p>
+                        <p class="blog-description">An overview of essential design principles that help create intuitive and user-friendly digital experiences.</p>
                         <a href="#" class="author-link">
                             <div class="blog-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/user.png" alt="John Doe Profile"> 
+                                <div class="blog-author-avatar">
+                                    <img src="assets/images/demo/user.png" alt="Samantha Lee Profile"> 
                                 </div>
-                                <div class="author-info">
-                                    <p class="author-name">Jane Smith</p>
-                                    <p class="author-job">Marketing Specialist</p>
+                                <div class="blog-author-info">
+                                    <p class="blog-author-name">Samantha Lee</p>
+                                    <p class="blog-author-role">UI/UX Designer</p>
                                 </div>
                             </div>
                         </a>
@@ -130,27 +134,27 @@
                 </article>
                 
                 <!-- Blog Item 3 -->
-                <article class="blog-item">
+                <article class="blog-card" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100" data-aos-easing="ease-in-out">
                     <a href="#" class="blog-link">
-                        <div class="blog-image">
-                            <img src="assets/images/blog-3.jpg" alt="Blog Post 3">
+                        <div class="blog-thumbnail">
+                            <img src="assets/images/demo/blog-3.jpg" alt="Blog Post 3">
                         </div>
                     </a>
-                    <div class="blog-content">
-                        <span class="blog-category">Graphic Design</span>
+                    <div class="blog-body">
+                        <span class="blog-category">Web Design</span>
                         <time class="blog-date" datetime="2023-03-10">March 10, 2023</time>
-                        <h3 class="blog-title">
-                            <a href="#" class="blog-link">What are the Latest Trends in Graphic Design?</a>
+                        <h3 class="blog-heading">
+                            <a href="#" class="blog-link">How Responsive Design Improves User Experience</a>
                         </h3>
-                        <p class="blog-description">Discover emerging trends in graphic design, including bold colors, typography, and sustainable practices for modern branding.</p>
+                        <p class="blog-description">A discussion on why responsive design is critical for delivering consistent experiences across different devices.</p>
                         <a href="#" class="author-link">
                             <div class="blog-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/user.png" alt="John Doe Profile"> 
+                                <div class="blog-author-avatar">
+                                    <img src="assets/images/demo/user.png" alt="Alex Morgan Profile"> 
                                 </div>
-                                <div class="author-info">
-                                    <p class="author-name">Alex Johnson</p>
-                                    <p class="author-job">Graphic Designer</p>
+                                <div class="blog-author-info">
+                                    <p class="blog-author-name">Alex Morgan</p>
+                                    <p class="blog-author-role">Frontend Developer & Technical Writer</p>
                                 </div>
                             </div>
                         </a>
@@ -158,27 +162,27 @@
                 </article>
                 
                 <!-- Blog Item 4 -->
-                <article class="blog-item">
+                <article class="blog-card" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100" data-aos-easing="ease-in-out">
                     <a href="#" class="blog-link">
-                        <div class="blog-image">
-                            <img src="assets/images/blog-4.jpg" alt="Blog Post 3">
+                        <div class="blog-thumbnail">
+                            <img src="assets/images/demo/blog-4.jpg" alt="Blog Post 3">
                         </div>
                     </a>
-                    <div class="blog-content">
-                        <span class="blog-category">Graphic Design</span>
+                    <div class="blog-body">
+                        <span class="blog-category">Performance & Optimization</span>
                         <time class="blog-date" datetime="2023-03-10">March 10, 2023</time>
-                        <h3 class="blog-title">
-                            <a href="#" class="blog-link">What are the Latest Trends in Graphic Design?</a>
+                        <h3 class="blog-heading">
+                            <a href="#" class="blog-link">Optimizing Website Performance for Better Results</a>
                         </h3>
-                        <p class="blog-description">Discover emerging trends in graphic design, including bold colors, typography, and sustainable practices for modern branding.</p>
+                        <p class="blog-description">Key strategies to improve website speed, performance, and overall usability without sacrificing design quality.</p>
                         <a href="#" class="author-link">
                             <div class="blog-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/user.png" alt="John Doe Profile"> 
+                                <div class="blog-author-avatar">
+                                    <img src="assets/images/demo/user.png" alt="Alex Morgan Profile"> 
                                 </div>
-                                <div class="author-info">
-                                    <p class="author-name">Alex Johnson</p>
-                                    <p class="author-job">Graphic Designer</p>
+                                <div class="blog-author-info">
+                                    <p class="blog-author-name">Alex Morgan</p>
+                                    <p class="blog-author-role">Frontend Developer & Technical Writer</p>
                                 </div>
                             </div>
                         </a>
@@ -186,27 +190,27 @@
                 </article>
 
                 <!-- Blog Item 5 -->
-                <article class="blog-item">
+                <article class="blog-card" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100" data-aos-easing="ease-in-out">
                     <a href="#" class="blog-link">
-                        <div class="blog-image">
-                            <img src="assets/images/blog-5.jpg" alt="Blog Post 3">
+                        <div class="blog-thumbnail">
+                            <img src="assets/images/demo/blog-5.jpg" alt="Blog Post 3">
                         </div>
                     </a>
-                    <div class="blog-content">
-                        <span class="blog-category">Graphic Design</span>
+                    <div class="blog-body">
+                        <span class="blog-category">Product Design</span>
                         <time class="blog-date" datetime="2023-03-10">March 10, 2023</time>
-                        <h3 class="blog-title">
-                            <a href="#" class="blog-link">What are the Latest Trends in Graphic Design?</a>
+                        <h3 class="blog-heading">
+                            <a href="#" class="blog-link">From Idea to Interface: Designing Digital Products</a>
                         </h3>
-                        <p class="blog-description">Discover emerging trends in graphic design, including bold colors, typography, and sustainable practices for modern branding.</p>
+                        <p class="blog-description">A step-by-step look at the design process behind creating functional and visually appealing digital products.</p>
                         <a href="#" class="author-link">
                             <div class="blog-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/user.png" alt="John Doe Profile"> 
+                                <div class="blog-author-avatar">
+                                    <img src="assets/images/demo/user.png" alt="Daniel Foster Profile"> 
                                 </div>
-                                <div class="author-info">
-                                    <p class="author-name">Alex Johnson</p>
-                                    <p class="author-job">Graphic Designer</p>
+                                <div class="blog-author-info">
+                                    <p class="blog-author-name">Daniel Foster</p>
+                                    <p class="blog-author-role">Product Designer</p>
                                 </div>
                             </div>
                         </a>
@@ -238,7 +242,7 @@
     <!-- Footer End -->
 
     <!-- JavaScript -->
-    <script src="assets/js/blog.js"></script>
     <script src="assets/js/global.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
 </body>
 </html>

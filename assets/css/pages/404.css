@@ -1,0 +1,163 @@
+/* =====================================================
+    404 PAGE STYLES
+    Custom styles for the 404 error page.
+    Designed to match Envato standards: clean, modern, responsive, with light/dark theme support.
+    Inspired by W3Layouts Liberty Portfolio template (referensi design).
+===================================================== */
+
+/* ---------- 404 ERROR PAGE SECTION ---------- */
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--background) 0%, var(--surface) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.error-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.error-page .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .error-page .container {
+    background: rgba(2, 6, 23, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.error-page h1 {
+    font-size: clamp(6rem, 15vw, 10rem);
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.error-page h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+}
+
+.error-page p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error-page .btn-primary {
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.error-page .btn-primary i {
+    margin-right: 0.5rem;
+}
+
+/* ---------- RESPONSIVE STYLES FOR 404 PAGE ---------- */
+
+/* Tablet / Small Laptop (≤ 991px) */
+@media (max-width: 991px) {
+    .error-page .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .error-page h1 {
+        font-size: clamp(5rem, 12vw, 8rem);
+    }
+
+    .error-page h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .error-page p {
+        font-size: 1rem;
+    }
+}
+
+/* Large Mobile (≤ 767px) */
+@media (max-width: 767px) {
+    .error-page .container {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .error-page h1 {
+        font-size: clamp(4rem, 10vw, 6rem);
+    }
+
+    .error-page h2 {
+        font-size: clamp(1.3rem, 3vw, 1.8rem);
+    }
+
+    .error-page p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .error-page .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Small Mobile (≤ 575px) */
+@media (max-width: 575px) {
+    .error-page .container {
+        padding: 0.75rem;
+        margin: 0.25rem;
+    }
+
+    .error-page h1 {
+        font-size: clamp(3rem, 8vw, 5rem);
+    }
+
+    .error-page h2 {
+        font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    }
+
+    .error-page p {
+        font-size: 0.9rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .error-page .btn-primary {
+        font-size: 0.85rem;
+        padding: 0.625rem 1.25rem;
+    }
+}
+
+/* =============================================================================
+    END OF 404 PAGE STYLES
+    ============================================================================= */

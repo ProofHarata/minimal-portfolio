@@ -1,17 +1,26 @@
 # Minimal Portfolio HTML Template
 
-A clean and modern personal portfolio website template built with HTML, CSS, and JavaScript.
-Suitable for developers, designers, and freelancers.
+A clean, modern, and fully responsive **personal portfolio HTML template** built with pure HTML, CSS, and JavaScript.
+
+This template is perfect for developers, freelancers, designers, and anyone who wants a professional online presence. It features smooth scroll effects, a sleek resume section, portfolio showcase, blog preview, and a contact form — all in a minimal, elegant layout.
+
 
 ## Live Demo
-https://username.github.io/minimal-portfolio/
+https://proofharata.github.io/minimal-portfolio/
 
 ## Features
-- Clean & minimal design
-- Fully responsive layout
-- Pure HTML, CSS, and JavaScript
-- Easy to customize
-- Cross-browser compatible
+- Clean & Minimal Design  
+- Fully Responsive (mobile-friendly)  
+- Sectioned Layout (About, Skills, Resume, Portfolio, Blog & Contact)  
+- Smooth Scroll & Subtle Animations  
+- Easy to Customize  
+- Static HTML (No build tools needed)  
+- Works well on modern browsers
+
+## How to Use
+1. Clone or download this repository  
+2. Open `index.html` in your browser  
+3. Edit content, images, and styles as needed  
 
 ## Folder Structure
 assets/

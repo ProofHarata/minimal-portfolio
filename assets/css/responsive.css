@@ -1,21 +1,47 @@
-/*  =============================================================================
-    GLOBAL RESPONSIVE STYLESHEET
-    =============================================================================
-    This CSS file contains responsive styles that apply globally across the site.
-    - Navbar Responsive: Mobile navigation adjustments.
-    - General Layouts: Grid and flex adjustments for sections.
-    - Text and Spacing: Responsive font sizes and padding.
+/*  =====================================================
+    GLOBAL RESPONSIVE STYLES
+    This file handles responsive behavior for global elements.
+===================================================== */
 
-    For customization:
-    - Adjust media queries for different breakpoints.
-    - Ensure text sizes are readable on mobile (e.g., avoid overly large fonts).
-    ============================================================================= */
+/* ---------- Small Laptop (≤ 1199px) ---------- */
+@media (max-width: 1199px) {
+    body {
+        font-size: 16px;
+    }
 
-/*  -----------------------------------------------------------------------------
-    NAVBAR RESPONSIVE
-    ----------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-    .navbar .navigation {
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    h1, h2, h3 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+
+    /* Global grids */
+    .services-grid,
+    .portfolio-grid,
+    .blog-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+}
+
+/* ---------- Tablet / Small Laptop (≤ 991px) ---------- */
+@media (max-width: 991px) {
+    body {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    h1, h2, h3 {
+        font-size: clamp(1.6rem, 4vw, 2.4rem);
+    }
+
+    /* Navbar (hamburger) */
+    .site-navbar .navbar-menu {
         position: absolute;
         top: 70px;
         left: 0;
@@ -27,24 +53,25 @@
         transform: translateX(100%);
     }
 
-    [data-theme="dark"] .navbar .navigation {
+    [data-theme="dark"] .site-navbar .navbar-menu {
         background-color: var(--background);
     }
 
-    .navbar .navigation.active {
+    .site-navbar .navbar-menu.active {
         transform: translateX(0);
         opacity: 1;
+        z-index: -2;
         visibility: visible;
     }
 
-    .navbar .navigation ul {
+    .site-navbar .navbar-menu ul {
         flex-direction: column;
         width: 100%;
         padding: 1rem 0;
     }
 
-    .navbar .navigation ul li {
-        margin: 0.5rem 0;
+    .site-navbar .navbar-menu ul li {
+        margin: 0.7rem 0;
         text-align: center;
     }
 
@@ -64,66 +91,129 @@
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
-    .navbar .theme {
+    .site-navbar .theme {
         position: absolute;
         right: 2.4rem;
         margin: 0 1rem;
     }
 
-    .navbar .navbar-brand {
+    .site-navbar .navbar-brand {
         margin: 0 1rem;
     }
-}
 
-/*  -----------------------------------------------------------------------------
-    GENERAL LAYOUTS AND TEXT ADJUSTMENTS
-    ----------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-    .services-grid, .portfolio-grid, .blog-grid, .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .hero-container, .about-container, .contact-container, .skills-container, .resume-container {
-        flex-direction: column;
+    /* Global containers */
+    .hero-wrapper,
+    .about-wrapper,
+    .skills-wrapper,
+    .resume-wrapper,
+    .contact-wrapper {
         gap: 2rem;
         margin-top: 3rem;
     }
-    /* Text sizing: Prevent overly large fonts on mobile */
-    h1, h2, h3 {
-        font-size: clamp(1.5rem, 4vw, 2.5rem); /* Capped at 2.5rem for readability */
+
+    /* Global grids */
+    .services-grid,
+    .portfolio-grid,
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
-    .hero, .about, .skills, .services, .resume, .portfolio, .blog, .contact {
-        padding: 3rem 1rem;
-    }
-    .blog-item {
-        flex-direction: column;
-    }
-    .blog-image {
-        min-height: 200px;
-    }
-    .blog-content {
-        padding: 1rem;
+
+    /* Global forms */
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 0.8rem;
     }
 }
 
-/*  -----------------------------------------------------------------------------
-    ADDITIONAL BREAKPOINTS
-    ----------------------------------------------------------------------------- */
-@media (max-width: 480px) {
-    .services-grid, .portfolio-grid, .blog-grid, .projects-grid {
-        gap: 1.5rem; /* Tighter gaps for small screens */
+/* ---------- Large Mobile (≤ 767px) ---------- */
+@media (max-width: 767px) {
+    body {
+        font-size: 15px;
     }
-    .hero, .about, .skills, .services, .resume, .portfolio, .blog, .contact {
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    h1, h2, h3 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+    }
+
+    .social-links a .bi {
+        font-size: 24px;
+    }
+
+    .hero-wrapper,
+    .about-wrapper,
+    .skills-wrapper,
+    .resume-wrapper,
+    .contact-wrapper {
+        gap: 1.5rem;
+    }
+
+    .services-grid,
+    .portfolio-grid,
+    .blog-grid {
+        gap: 1.5rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* ---------- Small Mobile (≤ 575px) ---------- */
+@media (max-width: 575px) {
+    body {
+        font-size: 14px;
+    }
+
+    section {
         padding: 2rem 1rem;
     }
-    /* Further text reduction for very small screens */
+
     h1, h2, h3 {
         font-size: clamp(1.2rem, 3vw, 2rem);
+    }
+
+    /* Global grids */
+    .services-grid,
+    .portfolio-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-wrapper,
+    .about-wrapper,
+    .skills-wrapper,
+    .resume-wrapper,
+    .contact-wrapper {
+        gap: 1rem;
+    }
+
+    /* Global forms */
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
     }
 }
 
 /*  =============================================================================
-    END OF GLOBAL RESPONSIVE STYLESHEET
-    =============================================================================
-    For page-specific responsive styles, see individual page CSS files (e.g., blog.css).
+    END OF GLOBAL RESPONSIVE STYLES
+    Page-specific responsive styles are defined in each page CSS file
     ============================================================================= */

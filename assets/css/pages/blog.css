@@ -1,20 +1,10 @@
-/*  =============================================================================
-    BLOG PAGE STYLESHEET
-    =============================================================================
-    This CSS file contains styles specific to the blog page.
-    - Header Section: Styles for the page header with breadcrumbs.
-    - Blog Section: Layout and components for blog posts, including pagination and loading spinner.
-    - Responsive: Adjustments for mobile and tablet views.
+/*  =====================================================
+    BLOG LIST STYLES
+    Styles for the blog listing page (no sidebar).
+===================================================== */
 
-    For customization:
-    - Edit variables in style.css for global changes.
-    - Adjust font sizes and spacing in responsive sections for better mobile experience.
-    ============================================================================= */
-
-/*  -----------------------------------------------------------------------------
-    HEADER SECTION
-    ----------------------------------------------------------------------------- */
-.header {
+/* ---------- HEADER SECTION ---------- */
+.page-header {
     display: flex;
     min-height: 60vh;
     overflow-y: hidden;
@@ -27,7 +17,7 @@
     background: linear-gradient(135deg, var(--accent, #ff6b6b) 0%, var(--border, #4ecdc4) 90%);
 }
 
-.header::before {
+.page-header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -38,14 +28,14 @@
     z-index: 1;
 }
 
-.header .container {
+.page-header .container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
 }
 
-.header-container {
+.page-header-wrapper {
     gap: 2rem;
     display: flex;
     margin-top: 4rem;
@@ -54,7 +44,7 @@
     justify-content: center;
 }
 
-.header-container h2 {
+.page-header-wrapper h2 {
     font-weight: 700;
     margin-bottom: 1rem;
     color: #ffffff;
@@ -65,14 +55,14 @@
     letter-spacing: 0.05em;
 }
 
-.breadcrumb {
+.breadcrumb-nav {
     display: flex;
     text-align: center;
     margin-top: 0.5rem;
     justify-content: center;
 }
 
-.breadcrumb ul {
+.breadcrumb-nav ul {
     display: flex;
     list-style: none;
     gap: 0.5rem;
@@ -80,32 +70,30 @@
     margin: 0;
 }
 
-.breadcrumb li {
+.breadcrumb-nav li {
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: #ffffff;
 }
 
-.breadcrumb li a {
+.breadcrumb-nav li a {
     opacity: 0.7;
     color: #ffffff;
     text-decoration: none;
     transition: opacity 0.3s ease, color 0.3s ease;
 }
 
-.breadcrumb li a:hover {
+.breadcrumb-nav li a:hover {
     opacity: 1;
 }
 
-.breadcrumb .separator {
+.breadcrumb-nav .separator {
     font-weight: bold;
     opacity: 0.6;
 }
 
-/*  -----------------------------------------------------------------------------
-    BLOG SECTION
-    ----------------------------------------------------------------------------- */
+/* ---------- BLOG SECTION ---------- */
 .blog {
     padding: 2rem 1rem;
 }
@@ -115,38 +103,41 @@
     margin: 0 auto;
 }
 
+/* Blog Wrapper */
 .blog-list {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.blog-item {
+/* Blog Card (Articel) */
+.blog-card {
     display: flex;
     overflow: hidden;
     align-items: stretch;
     transition: box-shadow 0.3s ease;
 }
 
-.blog-item:hover .blog-image img {
-    transform: scale(1.04);
+.blog-card:hover .blog-thumbnail img {
+    transform: scale(1.1);
 }
 
-.blog-item .blog-link {
+.blog-card .blog-link {
     flex: 1.2;
     height: 350px;
     overflow: hidden;
     border-radius: 8px;
 }
 
-.blog-image img {
+.blog-thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.blog-content {
+/* Blog Content */
+.blog-body {
     flex: 1;
     padding: 1.5rem 0 1.5rem 4rem;
     display: flex;
@@ -174,11 +165,11 @@
     margin-bottom: 0.5rem;
 }
 
-.blog-title {
+.blog-heading {
     margin-bottom: 0.75rem;
 }
 
-.blog-title a {
+.blog-heading a {
     font-weight: bold;
     font-size: 1.9rem;
     color: var(--text);
@@ -186,7 +177,7 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-.blog-title a:hover {
+.blog-heading a:hover {
     color: var(--accent);
 }
 
@@ -198,61 +189,55 @@
     margin-bottom: 1rem;
 }
 
-.blog-content .author-link {
+.blog-body .author-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-.blog-content .blog-author {
+.blog-body .blog-author {
     display: flex;
     align-items: center;
     gap: 0.9rem;
     margin-top: auto;
 }
 
-.blog-content .author-avatar {
-    width: 50px;
-    height: 50px;
+.blog-body .blog-author-avatar {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     overflow: hidden;
-    background-image: url('../../images/user.png');
-    background-size: cover;
-    background-position: center;
 }
 
-.blog-item:nth-child(2) .author-avatar {
-    background-image: url('../../images/user.png');
+.blog-body .blog-author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-.blog-item:nth-child(3) .author-avatar {
-    background-image: url('../../images/user.png');
-}
-
-.blog-content .author-info {
+.blog-body .blog-author-info {
     display: flex;
     flex-direction: column;
 }
 
-.blog-content .author-name {
+.blog-body .blog-author-name {
     font-size: 1.3rem;
     font-weight: bold;
     color: var(--secondary);
     transition: color 0.3s ease;
 }
 
-.blog-content .author-name:hover {
+.blog-body .blog-author-name:hover {
     color: var(--accent);
 }
 
-.blog-content .author-job {
+.blog-body .blog-author-role {
     font-size: 0.9rem;
     color: var(--muted);
 }
 
-/*  -----------------------------------------------------------------------------
-    PAGINATION
-    ----------------------------------------------------------------------------- */
+/* ---------- PAGINATION WRAPPER ---------- */
 .pagination-wrapper {
     display: flex;
     justify-content: center;
@@ -286,7 +271,8 @@
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     text-align: center;
-    min-width: 2.5rem; /* Ensure consistent width for numbers */
+    /* Ensure consistent width for numbers */
+    min-width: 2.5rem; 
 }
 
 .page-numbers:hover {
@@ -315,7 +301,8 @@
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     text-align: center;
-    min-width: 2.5rem; /* Ensure consistent width for numbers */
+    /* Ensure consistent width for numbers */
+    min-width: 2.5rem; 
 }
 
 .next:hover {
@@ -324,121 +311,203 @@
     border-color: var(--accent);
 }
 
-/*  -----------------------------------------------------------------------------
-    LOADING SPINNER
-    ----------------------------------------------------------------------------- */
-.loading-spinner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    background: rgba(255, 255, 255, 0.9);
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
+/*  =============================================================================
+    RESPONSIVE (BLOG PAGE ONLY)
+    =============================================================================
+    These styles override or extend global-responsive.css
+    and apply only to the Blog page.
+============================================================================= */
+
+/* ---------- Small Laptop (≤ 1199px) ---------- */
+@media (max-width: 1199px) {
+    .page-header-wrapper h2 {
+        font-size: clamp(3.5rem, 4vw, 3.8rem);
+    }
+    .breadcrumb-nav ul {
+        gap: 0.4rem;
+    }
+    .blog-card {
+        flex-direction: row;
+    }
+    .blog-card .blog-link {
+        height: 320px;
+    }
+    .blog-thumbnail {
+        min-height: 220px;
+    }
+    .blog-body {
+        padding: 1.3rem 0 1.3rem 3rem;
+    }
+    .blog-heading a {
+        font-size: 1.7rem;
+    }
+    .blog-description {
+        font-size: 1.1rem;
+    }
+    .blog-body .blog-author-avatar {
+        width: 55px;
+        height: 55px;
+    }
+    .blog-body .blog-author-name {
+        font-size: 1.2rem;
+    }
+    .blog-body .blog-author-role {
+        font-size: 0.85rem;
+    }
+    .page-pagination {
+        gap: 0.4rem;
+    }
+    .page-numbers {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.95rem;
+    }
 }
 
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid var(--border);
-    border-top: 5px solid var(--accent);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/*  -----------------------------------------------------------------------------
-    RESPONSIVE ADJUSTMENTS
-    ----------------------------------------------------------------------------- */
-
-/* Header Responsive */
-@media (max-width: 768px) {
-    .header {
-        padding: 3rem 1rem;
-        min-height: 50vh;
+/* ---------- Tablet (≤ 991px) ---------- */
+@media (max-width: 991px) {
+    .page-header {
+        min-height: 60vh;
     }
-    .header-container h2 {
-        font-size: clamp(1.5rem, 6vw, 2.5rem); /* Reduced max size for mobile */
+    .page-header-wrapper h2 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
     }
-    .breadcrumb ul {
-        gap: 0.25rem;
+    .breadcrumb-nav ul {
+        gap: 0.3rem;
     }
-}
-
-/* Blog and Pagination Responsive */
-@media (max-width: 768px) {
-    .blog {
-        padding: 1.5rem 1rem;
-    }
-    .blog-item {
+    .blog-card {
         flex-direction: column;
     }
-    .blog-image {
-        flex: none;
-        width: 100%;
-        min-height: 200px; /* Adjusted for better proportion */
+    .blog-list {
+        gap: 0;
     }
-    .blog-content {
+    .blog-card .blog-link {
+        height: 270px;
+        flex: none;
+    }
+    .blog-body {
         padding: 1rem;
         flex: none;
     }
-    .blog-title a {
-        font-size: 1.4rem; /* Smaller title on mobile */
+    .blog-heading a {
+        font-size: 1.4rem;
     }
     .blog-description {
-        font-size: 1rem; /* Smaller description */
+        font-size: 1rem;
     }
-    .blog-content .author-avatar {
-        width: 40px; /* Smaller avatar on mobile */
+    .blog-body .blog-author-avatar {
+        width: 40px;
         height: 40px;
     }
-    .blog-content .author-name {
-        font-size: 1.1rem; /* Smaller author name */
+    .blog-body .blog-author-name {
+        font-size: 1.1rem;
     }
-    .blog-content .author-job {
-        font-size: 0.8rem; /* Smaller job title */
+    .blog-body .blog-author-role {
+        font-size: 0.8rem;
     }
     .page-pagination {
-        gap: 0.25rem;
-        flex-wrap: wrap; 
+        gap: 0.4rem;
+        flex-wrap: wrap;
         justify-content: center;
     }
     .page-numbers {
         padding: 0.4rem 0.8rem;
         font-size: 0.9rem;
-        min-width: 2rem;
     }
 }
 
-/* Additional Mobile Breakpoint */
-@media (max-width: 480px) {
-    .header-container h2 {
-        font-size: clamp(1.2rem, 5vw, 2rem); /* Even smaller for very small screens */
+/* ---------- Large Mobile (≤ 767px) ---------- */
+@media (max-width: 767px) {
+    .page-header {
+        min-height: 50vh;
     }
-    .blog-title a {
+    .page-header-wrapper h2 {
+        font-size: clamp(1.5rem, 6vw, 2.2rem);
+    }
+    .breadcrumb-nav ul {
+        gap: 0.25rem;
+    }
+    .blog-card {
+        flex-direction: column;
+    }
+    .blog-card .blog-link {
+        height: 220px;
+    }
+    .blog-body {
+        padding: 0.8rem;
+    }
+    .blog-heading a {
+        font-size: 1.3rem;
+    }
+    .blog-description {
+        font-size: 0.95rem;
+    }
+    .blog-body .blog-author-avatar {
+        width: 38px;
+        height: 38px;
+    }
+    .blog-body .blog-author-name {
+        font-size: 1rem;
+    }
+    .blog-body .blog-author-role {
+        font-size: 0.75rem;
+    }
+    .page-pagination {
+        gap: 0.3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .page-numbers {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ---------- Small Mobile (≤ 575px) ---------- */
+@media (max-width: 575px) {
+    .page-header {
+        min-height: 40vh;
+    }
+    .page-header-wrapper h2 {
+        font-size: clamp(1.2rem, 7vw, 2rem);
+    }
+    .breadcrumb-nav ul {
+        gap: 0.2rem;
+    }
+    .blog-card .blog-link {
+        height: 160px;
+    }
+    .blog-body {
+        padding: 0.7rem;
+    }
+    .blog-heading a {
         font-size: 1.2rem;
     }
     .blog-description {
         font-size: 0.9rem;
     }
-    .blog-content .author-avatar {
-        width: 35px; /* Even smaller avatar */
+    .blog-body .blog-author-avatar {
+        width: 35px;
         height: 35px;
     }
-    .blog-content .author-name {
+    .blog-body .blog-author-name {
         font-size: 1rem;
     }
-    .blog-content .author-job {
+    .blog-body .blog-author-role {
         font-size: 0.7rem;
+    }
+    .page-numbers {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* ---------- Extra Small Mobile (≤ 480px) ---------- */
+@media (max-width: 480px) {
+    .blog-heading a {
+        font-size: 1.1rem;
+    }
+    .blog-description {
+        font-size: 0.85rem;
     }
     .page-link {
         font-size: 0.8rem;
@@ -447,6 +516,4 @@
 
 /*  =============================================================================
     END OF BLOG STYLESHEET
-    =============================================================================
-    For global responsive styles, see globalresponsive.css.
     ============================================================================= */

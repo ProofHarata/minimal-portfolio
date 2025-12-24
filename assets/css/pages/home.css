@@ -1,27 +1,10 @@
-/*  =============================================================================
-    HOME PAGE STYLESHEET
-    =============================================================================
-    This CSS file contains styles specific to the home page.
-    - Hero Section: Full-screen hero with text and images.
-    - About Section: Personal introduction with details and images.
-    - Skills Section: Skills list with progress bars.
-    - Services Section: Grid of service cards.
-    - Resume Section: Timeline-based resume layout.
-    - Portfolio Section: Grid of portfolio items with overlays.
-    - Blog Section: Grid of blog posts.
-    - Contact Section: Contact form and info.
-    - Responsive: Adjustments for mobile and tablet views.
+/*  =====================================================
+    HOME PAGE STYLES
+    Styles specific to the homepage sections.
+===================================================== */
 
-    For customization:
-    - Edit variables in style.css for global changes (e.g., colors, fonts).
-    - Adjust section paddings or grid columns in responsive sections for layout tweaks.
-    ============================================================================= */
-
-/*  -----------------------------------------------------------------------------
-    HERO SECTION
-    ----------------------------------------------------------------------------- */
+/* ---------- HERO SECTION ---------- */
 .hero {
-    padding: 5rem 1rem;
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -31,12 +14,7 @@
     transition: background 0.3s ease;
 }
 
-.hero .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero-container {
+.hero-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,7 +28,7 @@
 }
 
 .hero-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--secondary);
 }
 
@@ -60,20 +38,20 @@
     color: var(--surface);
     transition: color 0.3s ease;
     font-family: 'Inter', sans-serif;
-    font-size: clamp(3.8rem, 4vw, 20rem);
+    font-size: clamp(3.7rem, 4vw, 10rem);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text p {
     line-height: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--muted);
     margin-bottom: 1rem;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: color 0.3s ease;
 }
 
-.hero-images {
+.hero-image {
     flex: 1;
     gap: 1rem;
     display: flex;
@@ -81,7 +59,7 @@
     flex-wrap: wrap;
 }
 
-.hero-images img {
+.hero-image img {
     max-width: 100%;
     height: auto;
     border-radius: 35%;
@@ -91,15 +69,15 @@
 }
 
 /* Social Media in Hero */
-.hero-text .social-media {
+.hero-text .social-links {
     margin-bottom: 2rem;
 }
 
-.social-media a .bi {
-    font-size: 24px;
+.social-links a .bi {
+    font-size: 26px;
 }
 
-.hero-text .social-media a:hover {
+.hero-text .social-links a:hover {
     background-color: var(--accent);
     border-color: var(--accent);
     color: var(--background);
@@ -121,19 +99,11 @@
     color: var(--muted);
 }
 
-/*  -----------------------------------------------------------------------------
-    ABOUT SECTION
-    ----------------------------------------------------------------------------- */
+/* ---------- ABOUT SECTION ---------- */
 .about {
-    padding: 5rem 1rem;
     background-color: var(--background);
     text-align: center;
     transition: background-color 0.3s ease;
-}
-
-.about .container {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .about h2 {
@@ -155,7 +125,7 @@
     border-radius: 2px;
 }
 
-.about-container {
+.about-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -193,38 +163,38 @@
     font-family: 'Nunito', sans-serif;
 }
 
-.about-details {
+.about-info-list {
     display: grid;
     gap: 1rem;
     margin-bottom: 2rem;
 }
 
-.detail-item {
+.about-info-item {
     display: flex;
     align-items: center;
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--border);
 }
 
-.detail-item .label {
+.about-info-item .label {
     font-weight: 600;
     color: var(--text);
     min-width: 120px;
     flex-shrink: 0;
 }
 
-.detail-item .value {
+.about-info-item .value {
     color: var(--muted);
 }
 
-.about-images {
+.about-image {
     flex: 1;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.about-images img {
+.about-image img {
     max-width: 100%;
     height: auto;
     border-radius: 0.5rem;
@@ -233,19 +203,11 @@
     min-width: 300px;
 }
 
-/*  -----------------------------------------------------------------------------
-    SKILLS SECTION
-    ----------------------------------------------------------------------------- */
+/* ---------- SKILLS SECTION ---------- */
 .skills {
-    padding: 5rem 1rem;
     background-color: var(--border);
     text-align: center;
     transition: background-color 0.3s ease;
-}
-
-.skills .container {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .skills h2 {
@@ -266,7 +228,7 @@
     border-radius: 2px;
 }
 
-.skills-container {
+.skills-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -294,7 +256,7 @@
     line-height: 1.6;
 }
 
-.skills-list {
+.skills-progress {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -302,11 +264,11 @@
     min-width: 300px;
 }
 
-.skill-item {
+.skills-item {
     text-align: left;
 }
 
-.skill-info {
+.skills-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
@@ -352,21 +314,13 @@
     animation: shimmer 2s infinite;
 }
 
-/*  -----------------------------------------------------------------------------
-    SERVICES SECTION
-    ----------------------------------------------------------------------------- */
+/* ---------- SERVICES SECTION ---------- */
 .services {
     padding: 80px 0;
     margin: 0 auto;
     background-color: var(--background);
     animation: fadeIn 1.5s ease-in-out;
     transition: background 0.3s ease;
-}
-
-.services .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .services h2 {
@@ -395,7 +349,7 @@
     gap: 2rem;
 }
 
-.services .card {
+.services .service-item {
     padding: 2rem;
     overflow: hidden;
     position: relative;
@@ -407,11 +361,11 @@
     -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
-.services .photo-container {
+.services .service-icon {
     margin-bottom: 0.7rem;
 }
 
-.services .photo-container .bi {
+.services .service-icon .bi {
     color: var(--primary);
     font-size: 3rem;
 }
@@ -425,7 +379,7 @@
     transition: color 0.3s ease;
 }
 
-.services .card:hover .card-title {
+.services .service-item:hover .card-title {
     color: var(--primary);
 }
 
@@ -439,19 +393,11 @@
     font-family: 'Nunito', sans-serif;
 }
 
-/*  -----------------------------------------------------------------------------
-    RESUME SECTION
-    ----------------------------------------------------------------------------- */
+/* ---------- RESUME SECTION ---------- */
 .resume {
-    padding: 5rem 1rem;
     background-color: var(--border);
     text-align: center;
     transition: background-color 0.3s ease;
-}
-
-.resume .container {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .resume h2 {
@@ -472,14 +418,15 @@
     border-radius: 2px;
 }
 
-.resume-container {
+.resume-wrapper {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
     flex-wrap: wrap;
 }
 
-.resume-left, .resume-right {
+.resume-column.resume-column-left, 
+.resume-column.resume-column-right {
     flex: 1;
     min-width: 300px;
 }
@@ -525,7 +472,7 @@
     padding-left: 1rem;
 }
 
-.timeline-marker {
+.timeline-dot {
     position: absolute;
     left: -2.3rem;
     top: 0;
@@ -538,17 +485,17 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.timeline-item:hover .timeline-marker {
+.timeline-item:hover .timeline-dot {
     background-color: var(--primary);
     border: 2px solid var(--primary);
     transform: scale(1.2);
 }
 
-.timeline-content {
+.timeline-body {
     text-align: left;
 }
 
-.timeline-content h4 {
+.timeline-body h4 {
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--text);
@@ -563,32 +510,24 @@
     display: block;
 }
 
-.company {
+.timeline-company {
     font-size: 1rem;
     color: var(--muted);
     font-weight: 500;
     margin-bottom: 0.5rem;
 }
 
-.timeline-content p {
+.timeline-body p {
     font-size: 1rem;
     color: var(--muted);
     line-height: 1.6;
 }
 
-/*  -----------------------------------------------------------------------------
-    PORTFOLIO SECTION
-    ----------------------------------------------------------------------------- */
+/* ---------- PORTFOLIO SECTION ---------- */
 .portfolio {
-    padding: 5rem 1rem;
     background-color: var(--background);
     text-align: center;
     transition: background-color 0.3s ease;
-}
-
-.portfolio .container {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .portfolio h2 {
@@ -639,7 +578,7 @@
     transform: scale(1.05);
 }
 
-.overlay {
+.portfolio-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -653,24 +592,24 @@
     transition: opacity 0.3s ease;
 }
 
-.portfolio-item:hover .overlay {
+.portfolio-item:hover .portfolio-overlay {
     opacity: 1;
 }
 
-.overlay-content {
+.portfolio-overlay-content {
     text-align: center;
     color: white;
     padding: 1rem;
 }
 
-.overlay-content h3 {
+.portfolio-overlay-content h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
 }
 
-.overlay-content p {
+.portfolio-overlay-content p {
     font-size: 1rem;
     margin-bottom: 1rem;
 }
@@ -691,19 +630,11 @@
     color: var(--hovertxt);
 }
 
-/*  -----------------------------------------------------------------------------
-    BLOG SECTION
-    ----------------------------------------------------------------------------- */
+/* ---------- BLOG SECTION ---------- */
 .blog {
-    padding: 5rem 1rem;
     background-color: var(--border);
     text-align: center;
     transition: background-color 0.3s ease;
-}
-
-.blog .container {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .blog h2 {
@@ -730,33 +661,33 @@
     gap: 2rem;
 }
 
-.blog-item {
+.blog-card {
     overflow: hidden;
     transition: transform 0.3s ease;
 }
 
-.blog-image img {
+.blog-thumbnail img {
     width: 100%;
-    height: 200px;
+    height: 240px;
     cursor: pointer;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.blog-item .blog-image:hover img {
+.blog-card .blog-thumbnail:hover img {
     transform: scale(1.05);
 }
 
-.blog-content {
+.blog-body {
     padding: 0.5rem 0;
     text-align: left;
 }
 
-.blog-content .blog-title {
+.blog-body .blog-heading {
     width: 100%;
 }
 
-.blog-content .blog-title a {
+.blog-body .blog-heading a {
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: 600;
@@ -766,53 +697,45 @@
     text-decoration: none;
 }
 
-.blog-content .blog-title:hover a {
+.blog-body .blog-heading:hover a {
     color: var(--accent);
 }
 
-.blog-content .blog-meta {
+.blog-body .blog-meta {
     font-size: 0.9rem;
     color: var(--muted);
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 0;
 }
 
-.blog-content p {
+.blog-body p {
     font-weight: bold;
     font-size: 1rem;
     color: var(--muted);
     line-height: 1.6;
 }
 
-.blog-content p span {
+.blog-body p span {
     font-weight: 570;
     color: var(--accent);
 }
 
-.blog-content p a {
+.blog-body p a {
     font-weight: 570;
     transition: 0.4s;
     text-decoration: none;
     color: var(--accent);
 }
 
-.blog-content p a:hover {
+.blog-body p a:hover {
     color: var(--primary);
 }
 
-/*  -----------------------------------------------------------------------------
-    CONTACT SECTION
-    ----------------------------------------------------------------------------- */
+/* ---------- CONTACT SECTION ---------- */
 .contact {
-    padding: 5rem 1rem;
     background-color: var(--background);
     text-align: center;
     transition: background-color 0.3s ease;
-}
-
-.contact .container {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .contact h2 {
@@ -833,7 +756,7 @@
     border-radius: 2px;
 }
 
-.contact-container {
+.contact-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -870,19 +793,19 @@
     line-height: 1.6;
 }
 
-.contact-details {
+.contact-list {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.contact-item {
+.contact-list-item {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
 }
 
-.icon-circle {
+.contact-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -896,12 +819,12 @@
     flex-shrink: 0;
 }
 
-.icon-circle i.bi {
+.contact-icon i.bi {
     list-style: none;
     font-size: 27px;
 }
 
-.contact-item:hover .icon-circle {
+.contact-list-item:hover .contact-icon {
     border-color: var(--primary);
 }
 
@@ -963,197 +886,408 @@
     min-height: 150px;
 }
 
-.contact .social-media a {
+.contact .social-links a {
     border: 2px solid var(--border);
     background-color: var(--surface);
 }
 
-.contact .social-media a:hover {
+.contact .social-links a:hover {
     background-color: var(--accent);
     border: 2px solid var(--accent);
 }
 
-/*  -----------------------------------------------------------------------------
-    RESPONSIVE ADJUSTMENTS
-    ----------------------------------------------------------------------------- */
+/*  =============================================================================
+    RESPONSIVE (HOME PAGE ONLY)
+    =============================================================================
+    These styles override or extend global-responsive.css
+    and apply only to the Home page.
+============================================================================= */
 
-/* Hero Responsive */
-@media (max-width: 768px) {
-    .hero {
-        padding: 3rem 1rem;
-        min-height: auto; /* Adjust for mobile */
-    }
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
+/* ---------- Small Laptop (≤ 1199px) ---------- */
+@media (max-width: 1199px) {
+
+    /* Typography */
     .hero-text h1 {
-        font-size: clamp(2.5rem, 6vw, 4rem); /* Smaller on mobile */
+        font-size: clamp(3.5rem, 4vw, 4rem);
     }
-    .hero-text p {
-        font-size: 1rem;
+
+    .hero-text p,
+    .about-text p,
+    .skills-text p,
+    .services p,
+    .timeline-company,
+    .timeline-body p,
+    .portfolio-overlay-content p {
+        font-size: 0.95rem;
     }
-    .hero-images img {
-        min-width: 150px;
+
+    .about-text h3,
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.9rem;
+    }
+
+    .skills-text h3 {
+        font-size: 2.2rem;
+    }
+
+    .services .card-title,
+    .portfolio-overlay-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .timeline-body h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Portfolio */
+    .portfolio-image img {
+        height: 230px;
+    }
+
+    /* Blog */
+    .blog-card {
+        flex-direction: row;
+    }
+
+    .blog-thumbnail {
+        min-height: 220px;
+    }
+
+    .blog-thumbnail img {
+        height: 190px;
+    }
+
+    .blog-body {
+        padding: 1.2rem 0 1.2rem 3rem;
+    }
+
+    /* Contact */
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.9rem;
     }
 }
 
-/* About Responsive */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .about-text h3 {
-        font-size: 1.8rem;
-    }
-    .about-text p {
-        font-size: 1rem;
-    }
-    .about-images img {
-        min-width: 250px;
-    }
-}
+/* ---------- Tablet / Small Laptop (≤ 991px) ---------- */
+@media (max-width: 991px) {
 
-/* Skills Responsive */
-@media (max-width: 768px) {
-    .skills-container {
-        flex-direction: column;
-        gap: 2rem;
+    /* Typography */
+    .hero-text h1 {
+        font-size: clamp(2.5rem, 4.7vw, 4rem);
     }
-    .skills-text, .skills-list {
-        min-width: unset;
-        width: 100%;
-    }
-    .skills-list {
-        gap: 1.5rem;
-    }
-    .skill-info {
-        margin-bottom: 0.3rem;
-    }
-    .skill-name, .skill-percentage {
-        font-size: 1rem;
-    }
-}
 
-/* Services Responsive */
-@media (max-width: 768px) {
-    .services {
-        padding: 60px 0;
+    .hero-text p,
+    .about-text p,
+    .skills-text p,
+    .services p,
+    .portfolio-item p,
+    .blog-body p,
+    .portfolio-overlay-content p,
+    .timeline-company,
+    .timeline-body p {
+        font-size: 0.95rem;
     }
-    .services .card {
-        padding: 1.5rem;
+
+    .about-text h3,
+    .skills-text h3,
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.7rem;
     }
-    .services .card-title {
+
+    /* Card & Item Spacing */
+    .services .card-title,
+    .portfolio-item h3,
+    .portfolio-overlay-content h3,
+    .blog-heading a {
         font-size: 1.3rem;
     }
-    .services p {
-        font-size: 0.9rem;
-        line-height: 1.5rem;
-    }
-    .btn-more a {
-        font-size: 1.1rem;
-    }
-    .btn-more a i.bi {
-        font-size: 1.5rem;
-    }
-}
 
-@media (max-width: 480px) {
-    .services .card {
-        padding: 1rem;
-    }
-    .services .card-title {
+    .timeline-body h4 {
         font-size: 1.2rem;
     }
-    .services p {
-        font-size: 0.85rem;
-        line-height: 1.4rem;
-    }
-    .btn-more a {
-        font-size: 1rem;
-        padding: 0.4rem;
-    }
-}
 
-/* Resume Responsive */
-@media (max-width: 768px) {
-    .resume-container {
-        flex-direction: column;
-        gap: 2rem;
+    .services .service-item,
+    .portfolio-item,
+    .blog-card {
+        padding: 1.5rem;
     }
-    .resume-left, .resume-right {
-        min-width: unset;
-    }
-    .timeline {
-        padding-left: 1.5rem;
-    }
-    .timeline-marker {
-        left: -1.8rem;
-    }
-    .timeline-content h4 {
-        font-size: 1.1rem;
-    }
-    .company, .timeline-content p {
-        font-size: 0.9rem;
-    }
-}
 
-/* Portfolio Responsive */
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
+    /* Portfolio */
     .portfolio-image img {
+        height: 220px;
+    }
+
+    /* Blog (Horizontal Scroll) */
+    .blog-grid {
+        display: flex;
+        gap: 1.5rem;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        scroll-snap-type: x mandatory;
+    }
+
+    .blog-card {
+        flex: 0 0 calc(50% - 0.75rem);
+        min-width: calc(50% - 0.75rem);
+        scroll-snap-align: start;
+    }
+
+    .blog-thumbnail {
+        min-height: 160px;
+    }
+
+    .blog-thumbnail img {
         height: 200px;
     }
-    .overlay-content h3 {
-        font-size: 1.2rem;
-    }
-    .overlay-content p {
-        font-size: 0.9rem;
-    }
-}
 
-/* Blog Responsive */
-@media (max-width: 768px) {
-    .blog-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .blog-body {
+        padding: 1rem;
     }
-    .blog-content .blog-title a {
-        font-size: 1.2rem;
-    }
-    .blog-content p {
-        font-size: 0.9rem;
-    }
-}
 
-/* Contact Responsive */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .contact-info, .contact-form {
-        min-width: unset;
-        width: 100%;
-    }
-    .contact-item {
+    /* Contact */
+    .contact-list-item {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 1rem;
     }
+
     .contact-text {
         align-items: center;
     }
 }
 
+/* ---------- Large Mobile (≤ 767px) ---------- */
+@media (max-width: 767px) {
+
+    /* Hero */
+    .hero-text h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        min-width: 150px;
+    }
+
+    /* About */
+    .about-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-image img {
+        min-width: 250px;
+    }
+
+    /* Skills */
+    .skills-text,
+    .skills-progress {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .skills-text p {
+        font-size: 0.95rem;
+    }
+
+    .skills-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .skills-progress {
+        gap: 1.5rem;
+    }
+
+    .skills-header {
+        margin-bottom: 0.3rem;
+    }
+
+    .skill-name,
+    .skill-percentage {
+        font-size: 1rem;
+    }
+
+    /* Cards & Items */
+    .services .service-item,
+    .portfolio-item,
+    .blog-card {
+        padding: 1.2rem;
+    }
+
+    .services .card-title,
+    .portfolio-item h3,
+    .blog-heading a,
+    .portfolio-overlay-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .services p,
+    .portfolio-item p,
+    .blog-body p,
+    .portfolio-overlay-content p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+
+    /* Timeline */
+    .timeline {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-dot {
+        left: -1.8rem;
+    }
+
+    .timeline-body h4 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-company,
+    .timeline-body p {
+        font-size: 0.9rem;
+    }
+
+    /* Portfolio */
+    .portfolio-image img {
+        height: 200px;
+    }
+
+    /* Blog */
+    .blog-card {
+        flex: none;
+        min-width: unset;
+    }
+
+    .blog-thumbnail img {
+        height: 190px;
+    }
+
+    /* Contact */
+    .contact-info,
+    .contact-form {
+        min-width: unset;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.6rem;
+    }
+
+    .contact-list-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .contact-text {
+        align-items: center;
+    }
+}
+
+/* ---------- Small Mobile (≤ 575px) ---------- */
+@media (max-width: 575px) {
+
+    /* Hero */
+    .hero-text h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .hero-text p,
+    .about-text p,
+    .skills-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Section Titles */
+    .about-text h3,
+    .skills-text h3,
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Cards & Items */
+    .services .service-item,
+    .portfolio-item,
+    .blog-card {
+        padding: 1rem;
+    }
+
+    .services .card-title,
+    .portfolio-item h3,
+    .blog-heading a,
+    .portfolio-overlay-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .services p,
+    .portfolio-item p,
+    .blog-body p,
+    .portfolio-overlay-content p,
+    .timeline-company,
+    .timeline-body p {
+        font-size: 0.85rem;
+    }
+
+    /* Timeline */
+    .timeline {
+        padding-left: 1.2rem;
+    }
+
+    .timeline-dot {
+        left: -1.5rem;
+    }
+
+    .timeline-body h4 {
+        font-size: 1rem;
+    }
+
+    /* Portfolio */
+    .portfolio-image img {
+        height: 180px;
+    }
+
+    /* Blog */
+    .blog-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        overflow-y: hidden;
+    }
+
+    .blog-thumbnail img {
+        height: 160px;
+    }
+}
+
+/* ---------- Extra Small Mobile (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+    /* Services */
+    .services .service-item {
+        padding: 1rem;
+    }
+
+    .services .card-title {
+        font-size: 1.2rem;
+    }
+
+    .services p {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+    }
+}
+
 /*  =============================================================================
-    END OF HOME STYLESHEET
-    =============================================================================
-    For global responsive styles, see globalresponsive.css.
-    For other page-specific styles, see services.css, blog.css, etc.
+    END OF HOME PAGE STYLES
     ============================================================================= */

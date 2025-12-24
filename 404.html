@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 Page Not Found | Your Name</title>
+
+    <meta name="description" content="404 Page Not Found">
+    <meta name="author" content="Your Name">
+
+    <!-- ================= Favicon ================= -->
+    <!-- Replace logo.png with your own logo -->
+    <link rel="shortcut icon" href="assets/logo/logo-placeholder.png" type="image/x-icon">
+
+    <!-- ================= Vendor CSS ================= -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- ================= Template CSS ================= -->
+    <link href="assets/css/global.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/pages/blog-single.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- ==================================================
+    NAVBAR
+    Edit menu labels & links as needed
+    ================================================== -->
+    <nav class="site-navbar" id="navbar">
+        <div class="navbar-brand">
+            <!-- Replace logo image -->
+            <img src="assets/logo/logo-placeholder.png" alt="Logo">
+            <h3 class="brand-text">ProofHarata</h3>
+        </div>
+
+        <div class="navbar-menu">
+            <ul>
+                <!-- Navigation links -->
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#services">SERVICES</a></li>
+                <li><a href="index.html#resume">RESUME</a></li>
+                <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+                <li class="light"><a href="blog.html">BLOG</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <!-- Theme toggle (Light / Dark) -->
+        <div class="theme">
+            <button class="theme-toggle" onclick="toggleTheme()"><i class="bi bi-moon"></i></button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+
+    <!-- ==================================================
+    404 SECTION
+    ================================================== -->
+    <section class="error-page">
+        <div class="container" style="text-align:center; min-height:70vh; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+
+            <h1 style="font-size:clamp(4rem, 10vw, 7rem); font-family:'Montserrat', sans-serif; color:var(--primary);">
+                404
+            </h1>
+
+            <h2 style="font-size:clamp(1.5rem, 4vw, 2rem); margin-bottom:1rem;">
+                Page Not Found
+            </h2>
+
+            <p style="max-width:500px; color:var(--muted); margin-bottom:2rem;">
+                The page you are looking for might have been removed, had its name changed,
+                or is temporarily unavailable.
+            </p>
+
+            <a href="index.html" class="btn-primary">
+                <i class="bi bi-house-door"></i> Back to Home
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ==================================================
+    FOOTER
+    ================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Update copyright -->
+            <p>© 20XX Your Brand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/global.js"></script>
+</body>
+</html>

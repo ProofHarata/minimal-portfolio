@@ -3,10 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
-    <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
-    <meta name="author" content="Zoyothemes">
-    <title>Template - Portfolio</title>
+    <meta name="description" content="Responsive Personal Portfolio HTML Template" />
+    <meta name="keywords" content="personal portfolio, html template, responsive portfolio, developer portfolio" />
+    <meta name="author" content="Your Brand" />
+    <title>Minimal - Portfolio</title>
+
+    <!-- Link Favicon -->
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/x-icon">
 
     <!-- AOS - Animate On Scroll Library -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" type="text/css">
@@ -22,12 +25,12 @@
 <body>
 
     <!-- Navbar Start -->
-    <nav class="navbar" id="navbar">
+    <nav class="site-navbar" id="navbar">
         <div class="navbar-brand">
-            <img src="assets/images/circular_logo.png" alt="Logo">
-            <h3 class="brand-text">Pin<span>&Piece</span></h3>
+            <img src="assets/logo/logo.png" alt="Logo">
+            <h3 class="brand-text">ProofHarata</h3>
         </div>
-        <div class="navigation">
+        <div class="navbar-menu">
             <ul>
                 <li class="light"><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
@@ -53,12 +56,12 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-container">
+            <div class="hero-wrapper">
                 <div class="hero-text" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100" data-aos-easing="ease-in-out">
-                    <h2>Hi, I'm John Doe</h2>
+                    <h2>Hi, I'm ProofHarata</h2>
                     <h1>Frontend Developer</h1>
-                    <p>I build clean, responsive, and user-friendly websites using modern web technologies.</p>
-                    <div class="social-media">
+                    <p>I build clean and modern web interfaces.</p>
+                    <div class="social-links">
                         <a href="#"><i class="bi bi-linkedin"></i></a>
                         <a href="#"><i class="bi bi-github"></i></a>
                         <a href="#"><i class="bi bi-twitter-x"></i></a>
@@ -66,8 +69,8 @@
                     </div>
                     <a href="#contact" class="btn-primary">Contact Me</a>
                 </div>
-                <div class="hero-images" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-in-out">
-                    <img src="assets/images/profile-1.png" alt="Profile Illustration">
+                <div class="hero-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-in-out">
+                    <img src="assets/images/demo/profile-1.png" alt="Profile Illustration">
                 </div>
             </div>
         </div>
@@ -78,36 +81,36 @@
     <section id="about" class="about">
         <div class="container">
             <h2>ABOUT ME</h2>
-            <div class="about-container">
-                <div class="about-images" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-in-out">
-                    <img src="assets/images/profile-2.png" alt="Profile Photo">
+            <div class="about-wrapper">
+                <div class="about-image" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-in-out">
+                    <img src="assets/images/demo/profile-2.png" alt="Profile Photo">
                 </div>
                 <div class="about-text" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" data-aos-easing="ease-in-out">
-                    <h3>Hi There! I'm John Doe</h3>
+                    <h3>Hi There! I'm Proof Harata</h3>
                     <p class="subtitle">Frontend Developer</p>
-                    <p>I am a professional in graphic design and web development with over 5 years of experience. I believe that good design is not just about aesthetics, but also about functionality and positive impact on users.</p>
-                    <div class="about-details">
-                        <div class="detail-item">
+                    <p>I am a creative frontend developer focused on building clean, responsive, and user-friendly web interfaces. With a strong foundation in modern web technologies, I enjoy transforming ideas into digital experiences that are both visually appealing and functional.</p>
+                    <div class="about-info-list">
+                        <div class="about-info-item">
                             <span class="label">Birthday:</span>
-                            <span class="value">May 07, 1990</span>
+                            <span class="value">May 07, 1995</span>
                         </div>
-                        <div class="detail-item">
+                        <div class="about-info-item">
                             <span class="label">Phone:</span>
-                            <span class="value">+1 876-369-9009</span>
+                            <span class="value">+62 800 0000 0000</span>
                         </div>
-                        <div class="detail-item">
+                        <div class="about-info-item">
                             <span class="label">Email:</span>
-                            <span class="value">devis@example.com</span>
+                            <span class="value">hello@example.com</span>
                         </div>
-                        <div class="detail-item">
+                        <div class="about-info-item">
                             <span class="label">From:</span>
-                            <span class="value">2661 Hich meadow lane bear creek</span>
+                            <span class="value">Remote / Worldwide</span>
                         </div>
-                        <div class="detail-item">
+                        <div class="about-info-item">
                             <span class="label">Language:</span>
                             <span class="value">English, Germanic</span>
                         </div>
-                        <div class="detail-item">
+                        <div class="about-info-item">
                             <span class="label">Freelance:</span>
                             <span class="value">Available</span>
                         </div>
@@ -123,15 +126,15 @@
     <section id="skills" class="skills">
         <div class="container">
             <h2>SKILLS</h2>
-            <div class="skills-container">
+            <div class="skills-wrapper">
                 <div class="skills-text">
-                    <h3>All the skills that I have in that field of work are mentioned.</h3>
-                    <p>I have a strong foundation in web development technologies, with hands-on experience in building responsive and interactive websites. Here are some of the key skills I've mastered over the years.</p>
-                    <p>I have a strong foundation in web development technologies, with hands-on experience in building responsive and interactive websites. Here are some of the key skills I've mastered over the years.</p>
+                    <h3>My professional skill set</h3>
+                    <p>A collection of technical and creative skills developed through hands-on experience in web development. I focus on building responsive, accessible, and high-performance websites using modern tools and best practices.</p>
+                    <p>These skills represent the core technologies and methods I use to turn ideas into functional and engaging digital products.</p>
                 </div>
-                <div class="skills-list">
-                    <div class="skill-item">
-                        <div class="skill-info">
+                <div class="skills-progress">
+                    <div class="skills-item">
+                        <div class="skills-header">
                             <span class="skill-name">HTML</span>
                             <span class="skill-percentage">90%</span>
                         </div>
@@ -139,8 +142,8 @@
                             <div class="progress" style="width: 90%;"></div>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
+                    <div class="skills-item">
+                        <div class="skills-header">
                             <span class="skill-name">CSS</span>
                             <span class="skill-percentage">85%</span>
                         </div>
@@ -148,8 +151,8 @@
                             <div class="progress" style="width: 85%;"></div>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
+                    <div class="skills-item">
+                        <div class="skills-header">
                             <span class="skill-name">JavaScript</span>
                             <span class="skill-percentage">80%</span>
                         </div>
@@ -157,8 +160,8 @@
                             <div class="progress" style="width: 80%;"></div>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
+                    <div class="skills-item">
+                        <div class="skills-header">
                             <span class="skill-name">Java</span>
                             <span class="skill-percentage">75%</span>
                         </div>
@@ -177,47 +180,47 @@
         <div class="container">
             <h2>SERVICES</h2>
             <div class="services-grid">
-                <div class="card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200" data-aos-easing="ease-in-out">
-                    <div class="photo-container">
+                <div class="service-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200" data-aos-easing="ease-in-out">
+                    <div class="service-icon">
                         <i class="bi bi-layout-text-window"></i>
                     </div>
                     <h3 class="card-title">UI/UX Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem necessitatibus adipisci aliquid!</p>
+                    <p>Designing intuitive and user-centered interfaces that focus on usability, clarity, and visual balance to enhance the overall user experience.</p>
                 </div>
-                <div class="card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300" data-aos-easing="ease-in-out">
-                    <div class="photo-container">
+                <div class="service-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300" data-aos-easing="ease-in-out">
+                    <div class="service-icon">
                         <i class="bi bi-phone"></i>
                     </div>
                     <h3 class="card-title">App Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem necessitatibus adipisci aliquid!</p>
+                    <p>Creating clean and modern application interfaces with attention to layout, consistency, and user interaction patterns.</p>
                 </div>
-                <div class="card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400" data-aos-easing="ease-in-out">
-                    <div class="photo-container">
+                <div class="service-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400" data-aos-easing="ease-in-out">
+                    <div class="service-icon">
                         <i class="bi bi-display"></i>
                     </div>
                     <h3 class="card-title">Responsive Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem necessitatibus adipisci aliquid!</p>
+                    <p>Building layouts that adapt seamlessly across all screen sizes, ensuring a consistent experience on desktop, tablet, and mobile devices.</p>
                 </div>
-                <div class="card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500" data-aos-easing="ease-in-out">
-                    <div class="photo-container">
+                <div class="service-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500" data-aos-easing="ease-in-out">
+                    <div class="service-icon">
                         <i class="bi bi-tools"></i>
                     </div>
                     <h3 class="card-title">Website Maintenance</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem necessitatibus adipisci aliquid!</p>
+                    <p>Providing ongoing updates, performance checks, and content adjustments to keep websites secure, stable, and up to date.</p>
                 </div>
-                <div class="card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600" data-aos-easing="ease-in-out">
-                    <div class="photo-container">
+                <div class="service-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600" data-aos-easing="ease-in-out">
+                    <div class="service-icon">
                         <i class="bi bi-code-slash"></i>
                     </div>
                     <h3 class="card-title">Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem necessitatibus adipisci aliquid!</p>
+                    <p>Developing fast, scalable, and well-structured websites using modern web technologies and best development practices.</p>
                 </div>
-                <div class="card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="700" data-aos-easing="ease-in-out">
-                    <div class="photo-container">
+                <div class="service-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="700" data-aos-easing="ease-in-out">
+                    <div class="service-icon">
                         <i class="bi bi-speedometer2"></i>
                     </div>
                     <h3 class="card-title">Performance Optimization</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem necessitatibus adipisci aliquid!</p>
+                    <p>Optimizing website speed and performance through clean code, efficient assets, and best practices for loading and rendering.</p>
                 </div>
             </div>
         </div>
@@ -228,73 +231,73 @@
     <section id="resume" class="resume">
         <div class="container">
             <h2>RESUME</h2>
-            <div class="resume-container">
-                <div class="resume-left">
+            <div class="resume-wrapper">
+                <div class="resume-column resume-column-left">
                     <div class="resume-section-heading">
-                        <i class="bi bi-briefcase-fill"></i>
+                        <i class="bi bi-briefcase"></i>
                         <h3 class="resume-section-title">Experience</h3>
                     </div>
                     <div class="timeline">
                         <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-body">
                                 <h4>Senior UX/UI Designer</h4>
                                 <span class="timeline-date">Jan 2020 - Present</span>
-                                <p class="company">Bergnaum, Hills and Howe</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                                <p class="timeline-company">Bergnaum, Hills and Howe</p>
+                                <p>Leading the design process for web and mobile products, focusing on user experience, interface consistency, and design systems. Collaborating closely with developers and stakeholders to deliver functional and visually refined solutions.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-body">
                                 <h4>Product Designer</h4>
-                                <span class="timeline-date">Jan 2016 - December 2019</span>
-                                <p class="company">Langosh, Sipes and Raynor</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                                <span class="timeline-date">Jan 2016 – Dec 2019</span>
+                                <p class="timeline-company">Langosh, Sipes and Raynor</p>
+                                <p>Designed end-to-end digital products, from wireframes to high-fidelity prototypes. Contributed to improving usability, accessibility, and overall product performance..</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-body">
                                 <h4>UI/UX Designer</h4>
-                                <span class="timeline-date">Jan 2014 - December 2015</span>
-                                <p class="company">Strosin, Maggio and Homenick</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                                <span class="timeline-date">Jan 2014 – Dec 2015</span>
+                                <p class="timeline-company">Strosin, Maggio and Homenick</p>
+                                <p>Worked on interface design and user research to create intuitive layouts. Assisted in usability testing and iterative design improvements across multiple projects.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="resume-right">
+                <div class="resume-column resume-column-right">
                     <div class="resume-section-heading">
-                        <i class="bi bi-mortarboard-fill"></i>
+                        <i class="bi bi-mortarboard"></i>
                         <h3 class="resume-section-title">Education</h3>
                     </div>
                     <div class="timeline">
                         <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-body">
                                 <h4>Master of Computer Science</h4>
                                 <span class="timeline-date">2015 - 2016</span>
-                                <p class="company">University of XYZ</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                                <p class="timeline-company">University of XYZ</p>
+                                <p>Focused on advanced software engineering concepts, human–computer interaction, and modern web technologies.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-body">
                                 <h4>Bachelor of Computer Science</h4>
                                 <span class="timeline-date">2010 - 2014</span>
-                                <p class="company">University of ABC</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                                <p class="timeline-company">University of ABC</p>
+                                <p>Built a strong foundation in programming, data structures, and web development fundamentals.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-body">
                                 <h4>Diploma in Computer Science</h4>
                                 <span class="timeline-date">2006 - 2010</span>
-                                <p class="company">XYZ Institution</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                                <p class="timeline-company">XYZ Institution</p>
+                                <p>Studied core computer science principles, basic application development, and system fundamentals.</p>
                             </div>
                         </div>
                     </div>
@@ -311,11 +314,11 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100" data-aos-easing="ease-in-out">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio-1.jpg" alt="Project 1">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>Project Title 1</h3>
-                                <p>Brief description of the project.</p>
+                        <img src="assets/images/demo/portfolio-1.jpg" alt="Project 1">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h3>Modern Portfolio Website</h3>
+                                <p>A clean and responsive personal portfolio website designed to showcase projects, skills, and experience effectively.</p>
                                 <a href="#" class="view-project">View Project</a>
                             </div>
                         </div>
@@ -323,11 +326,11 @@
                 </div>
                 <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200" data-aos-easing="ease-in-out">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio-2.jpg" alt="Project 2">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>Project Title 2</h3>
-                                <p>Brief description of the project.</p>
+                        <img src="assets/images/demo/portfolio-2.jpg" alt="Project 2">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h3>Creative Agency Landing Page</h3>
+                                <p>A modern landing page concept focused on clear messaging, visual hierarchy, and conversion-oriented design.</p>
                                 <a href="#" class="view-project">View Project</a>
                             </div>
                         </div>
@@ -335,11 +338,11 @@
                 </div>
                 <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300" data-aos-easing="ease-in-out">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio-3.jpg" alt="Project 3">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>Project Title 3</h3>
-                                <p>Brief description of the project.</p>
+                        <img src="assets/images/demo/portfolio-3.jpg" alt="Project 3">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h3>Business Dashboard UI</h3>
+                                <p>A dashboard interface designed for managing data, analytics, and daily operations with clarity and usability in mind.</p>
                                 <a href="#" class="view-project">View Project</a>
                             </div>
                         </div>
@@ -347,11 +350,11 @@
                 </div>
                 <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400" data-aos-easing="ease-in-out">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio-4.jpg" alt="Project 4">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>Project Title 4</h3>
-                                <p>Brief description of the project.</p>
+                        <img src="assets/images/demo/portfolio-4.jpg" alt="Project 4">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h3>E-commerce Website Concept</h3>
+                                <p>A responsive e-commerce website layout optimized for product presentation and user experience.</p>
                                 <a href="#" class="view-project">View Project</a>
                             </div>
                         </div>
@@ -359,11 +362,11 @@
                 </div>
                 <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500" data-aos-easing="ease-in-out">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio-5.jpg" alt="Project 5">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>Project Title 5</h3>
-                                <p>Brief description of the project.</p>
+                        <img src="assets/images/demo/portfolio-5.jpg" alt="Project 5">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h3>Mobile App UI Design</h3>
+                                <p>A user-friendly mobile application interface with a focus on intuitive navigation and clean visual design.</p>
                                 <a href="#" class="view-project">View Project</a>
                             </div>
                         </div>
@@ -371,11 +374,11 @@
                 </div>
                 <div class="portfolio-item" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600" data-aos-easing="ease-in-out">
                     <div class="portfolio-image">
-                        <img src="assets/images/portfolio-6.jpg" alt="Project 6">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>Project Title 6</h3>
-                                <p>Brief description of the project.</p>
+                        <img src="assets/images/demo/portfolio-6.jpg" alt="Project 6">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <h3>Personal Branding Website</h3>
+                                <p>A minimalist website concept created to highlight personal identity, services, and online presence.</p>
                                 <a href="#" class="view-project">View Project</a>
                             </div>
                         </div>
@@ -391,36 +394,36 @@
         <div class="container">
             <h2>BLOG</h2>
             <div class="blog-grid">
-                <div class="blog-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-aos-easing="ease-in-out">
-                    <div class="blog-image">
-                        <img src="assets/images/blog-1.jpg" alt="Blog Post 1">
+                <div class="blog-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-aos-easing="ease-in-out">
+                    <div class="blog-thumbnail">
+                        <img src="assets/images/demo/blog-1.jpg" alt="Blog Post 1">
                     </div>
-                    <div class="blog-content">
+                    <div class="blog-body">
                         <p class="blog-meta">By: <a href="">Admin</a> | <span>01-15-2023</span></p>
-                        <div class="blog-title">
+                        <div class="blog-heading">
                             <a href="">Understanding Modern Web Design Trends</a>
                         </div>
                     </div>
                 </div>
-                <div class="blog-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300" data-aos-easing="ease-in-out">
-                    <div class="blog-image">
-                        <img src="assets/images/blog-2.jpg" alt="Blog Post 2">
+                <div class="blog-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300" data-aos-easing="ease-in-out">
+                    <div class="blog-thumbnail">
+                        <img src="assets/images/demo/blog-2.jpg" alt="Blog Post 2">
                     </div>
-                    <div class="blog-content">
+                    <div class="blog-body">
                         <p class="blog-meta">By: <a href="">Admin</a> | <span>02-20-2023</span></p>
-                        <div class="blog-title">
-                            <a href="">The Importance of Responsive Design</a>
+                        <div class="blog-heading">
+                            <a href="">UI/UX Design Principles Every Designer Should Know</a>
                         </div>
                     </div>
                 </div>
-                <div class="blog-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400" data-aos-easing="ease-in-out">
-                    <div class="blog-image">
-                        <img src="assets/images/blog-3.jpg" alt="Blog Post 3">
+                <div class="blog-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400" data-aos-easing="ease-in-out">
+                    <div class="blog-thumbnail">
+                        <img src="assets/images/demo/blog-3.jpg" alt="Blog Post 3">
                     </div>
-                    <div class="blog-content">
+                    <div class="blog-body">
                         <p class="blog-meta">By: <a href="#">Admin</a> | <span>03-10-2023</span></p>
-                        <div class="blog-title">
-                            <a href="#">What are the latest trends in Graphic design according to you?</a>
+                        <div class="blog-heading">
+                            <a href="#">How Responsive Design Improves User Experience</a>
                         </div>
                     </div>
                 </div>
@@ -433,41 +436,41 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>CONTACT</h2>
-            <div class="contact-container">
+            <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>Get In Touch</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique sint minus necessitatibus praesentium aut unde!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="icon-circle">
+                    <p>Feel free to reach out for collaborations, project inquiries, or just to say hello. I’m always open to discussing new ideas and opportunities.</p>
+                    <div class="contact-list">
+                        <div class="contact-list-item">
+                            <div class="contact-icon">
                                 <i class="bi bi-geo-alt"></i>
                             </div>
                             <div class="contact-text">
                                 <div class="label">Address</div>
-                                <div class="value"><a href="#">2661 Hich meadow lane bear creek</a></div>
+                                <div class="value"><a href="#">Remote / Worldwide</a></div>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="icon-circle">
+                        <div class="contact-list-item">
+                            <div class="contact-icon">
                                 <i class="bi bi-phone"></i>
                             </div>
                             <div class="contact-text">
                                 <div class="label">Phone</div>
-                                <div class="value"><a href="tel:+18763699009">+1 876-369-9009</a></div>
+                                <div class="value"><a href="tel:+18763699009">+62 800 0000 0000</a></div>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="icon-circle">
+                        <div class="contact-list-item">
+                            <div class="contact-icon">
                                 <i class="bi bi-envelope"></i>
                             </div>
                             <div class="contact-text">
                                 <div class="label">Email</div>
-                                <div class="value"><a href="mailto:devis@example.com">devis@example.com</a></div>
+                                <div class="value"><a href="mailto:devis@example.com">hello@example.com</a></div>
                             </div>
                         </div>
                     </div>
                     <p class="social-profile">Visite my social profile and get connected</p>
-                    <div class="social-media">
+                    <div class="social-links">
                         <a href="#"><i class="bi bi-linkedin"></i></a>
                         <a href="#"><i class="bi bi-github"></i></a>
                         <a href="#"><i class="bi bi-twitter-x"></i></a>

@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
-    <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
-    <meta name="author" content="Zoyothemes">
+    <meta name="description" content="Responsive Personal Portfolio HTML Template" />
+    <meta name="keywords" content="personal portfolio, html template, responsive portfolio, developer portfolio" />
+    <meta name="author" content="Your Brand" />
     <title>Template - Portfolio</title>
+
+    <!-- Link Favicon -->
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/x-icon">
     
     <!-- Bootstrap Icon -->
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" type="text/css">
@@ -19,19 +23,19 @@
 <body>
 
     <!-- Navbar Start -->
-    <nav class="navbar" id="navbar">
+    <nav class="site-navbar" id="navbar">
         <div class="navbar-brand">
-            <img src="assets/images/circular_logo.png" alt="Logo">
-            <h3 class="brand-text">Pin<span>&Piece</span></h3>
+            <img src="assets/logo/logo.png" alt="Logo">
+            <h3 class="brand-text">ProofHarata</h3>
         </div>
-        <div class="navigation">
+        <div class="navbar-menu">
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="index.html#about">ABOUT</a></li>
                 <li><a href="index.html#services">SERVICES</a></li>
                 <li><a href="index.html#resume">RESUME</a></li>
                 <li><a href="index.html#portfolio">PORTFOLIO</a></li>
-                <li><a href="blog.html">BLOG</a></li>
+                <li  class="light"><a href="blog.html">BLOG</a></li>
                 <li><a href="index.html#contact">CONTACT</a></li>
             </ul>
         </div>
@@ -48,29 +52,27 @@
     <!-- Navbar End -->
 
     <!-- Blog Section -->
-    <section class="blog-post" id="blog-post">
+    <section class="blog-single" id="blog-single">
         <div class="container">
-            <div class="post-content">
+            <div class="blog-single-wrapper">
+
                 <div class="post-header">
-                    <!-- Post Header: Category and Date -->
                     <div class="post-meta">
-                        <p>Startup Business</p>
-                        <span>Mar 22, 2022</span>
+                        <p>Startup Business</p> 
+                        <span>Mar 22, 2022</span> 
                     </div>
-                    <!-- Title -->
-                    <div class="title-section">
-                        <h3 class="title">How to hack your Virtual Reality Life for Max Efficiency!</h3>
+                    <div class="post-title-wrapper">
+                        <h3 class="post-title">Building a Modern Portfolio Website</h3> 
                     </div>
-                    <!-- Author Profile and Social Media -->
-                    <div class="author-social">
+                    <div class="post-author-share">
                         <a href="#" class="author-link">
                             <div class="blog-author">
-                                <div class="author-avatar">
-                                    <img src="assets/images/user.png" alt="John Doe Profile"> 
+                                <div class="blog-author-avatar">
+                                    <img src="assets/images/demo/user.png" alt="John Doe Profile"> 
                                 </div>
-                                <div class="author-info">
-                                    <p class="author-name">John Doe</p>
-                                    <p class="author-job">Web Designer</p>
+                                <div class="blog-author-info">
+                                    <p class="blog-author-name">Alex Morgan</p> 
+                                    <p class="blog-author-role">Frontend Developer & Technical Writer</p> 
                                 </div>
                             </div>
                         </a>
@@ -81,158 +83,164 @@
                         </div>
                     </div>
                 </div>
+                
                 <!-- Featured Image (Thumbnail) -->
-                <img src="assets/images/blog-1.jpg" class="image" alt="blog-post-image" />
-                <span class="image-caption text-center">error dolore dolorem, aut possimus libero saepe</span>
+                <img src="assets/images/demo/blog-1.jpg" class="post-image" alt="blog-single-image" />
+                <span class="post-image-caption text-center">Blog Post Image</span>
+
                 <!-- Blog Content -->
-                <div class="post-body">
-                    <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
-                        consectetur.Ea consequuntur illum facere aperiam sequi optio consectetur adipisicing
-                        elitFuga,
-                        suscipit totam animi consequatur saepe blanditiis. Lorem ipsum dolor sit amet,Ea
-                        consequuntur
-                        illum facere aperiam sequi optio consectetur adipisicing elit. </p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, corrupti odit? At
-                        iure
-                        facere, porro repellat officia quas, dolores magnam assumenda soluta odit harum voluptate
-                        inventore ipsa maiores fugiat accusamus eos nulla. Iure voluptatibus explicabo officia.</p>
-                    <blockquote class="quote-block">
+                <div class="post-content-body">
+                    <p>
+                        Building a modern portfolio website is an essential step for showcasing your skills,
+                        experience, and professional identity. A well-designed portfolio helps visitors quickly
+                        understand who you are and what value you bring.
+                    </p>
+                
+                    <p>
+                        Beyond visual appeal, a portfolio should focus on clarity, structure, and usability.
+                        Clear navigation, consistent layouts, and meaningful content play a major role in creating
+                        a strong first impression.
+                    </p>
+                
+                    <blockquote class="post-quote">
                         <q>
-                            Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
-                            consectetur. Ea illum facere aperiam sequi optio consectetur.</q>
-                        <footer class="blockquote-footer">
-                            Alexander smith</footer>
+                            A portfolio is not just a collection of projects, but a reflection of how you think,
+                            design, and solve problems.
+                        </q>
+                        <footer class="blockquote-footer">Alex Morgan</footer>
                     </blockquote>
-                    <p>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id
-                        erat
-                        eu ullamcorper. Nunc id ipsum fringilla, gravida felis vitae. Phasellus lacinia id, sunt in
-                        culpa quis.</p>
-                    <h3 class="title-main">How to hack your Reality Life</h3>
-                    <p>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id
-                        erat eu ullamcorper. Nunc id ipsum fringilla, gravida felis vitae. Phasellus lacinia id,
-                        sunt in
-                        culpa quis.</p>
-                    <p>More off this less hello salamander lied porpoise much over tightly circa horse taped so
-                        innocuously outside crud mightily rigorous plot life. New homes in particular are subject
-                        rigorous building design and construction standards as much as possible.</p>
-                    <ul class="list-items">
-                        <li><strong>Return to investors.</strong> Our investors took a huge bet on us and they
-                            deserved to get a handsome return.</li>
-                        <li><strong>Return to employees.</strong> Our team also took a big bet on us over the years
-                            by investing their time. They deserved a return as well.</li>
-                        <li><strong>Stock options.</strong> If we weren’t planning to sell the company, giving
-                            employees stock options didn’t make sense. We needed a new way for the team to share in
-                            the success of the business.</li>
+                
+                    <p>
+                        Planning the structure before development allows you to organize content effectively.
+                        Sections like About, Skills, Portfolio, Blog, and Contact make it easier for users to
+                        explore your website without confusion.
+                    </p>
+                
+                    <h3 class="post-content-heading">Designing With Purpose</h3>
+                
+                    <p>
+                        Good design goes beyond aesthetics. Typography, spacing, color balance, and accessibility
+                        all contribute to a positive user experience and help communicate information clearly.
+                    </p>
+                
+                    <p>
+                        Modern portfolios benefit from responsive layouts that adapt seamlessly across devices.
+                        This ensures a consistent experience whether viewed on desktop, tablet, or mobile.
+                    </p>
+                
+                    <ul class="post-content-list">
+                        <li>
+                            <strong>Clear structure.</strong>
+                            Organize content logically so visitors can find information quickly.
+                        </li>
+                        <li>
+                            <strong>User-focused design.</strong>
+                            Design layouts that prioritize readability and usability.
+                        </li>
+                        <li>
+                            <strong>Performance optimization.</strong>
+                            Optimize images and assets to ensure fast loading times.
+                        </li>
                     </ul>
                 </div>
+
                 <!-- Additional Image -->
-                <img src="assets/images/blog-2.jpg" class="image" alt="blog-post-image" />
-                <span class="image-caption">error dolore dolorem, aut possimus libero saepe</span>
+                <img src="assets/images/demo/blog-2.jpg" class="post-image" alt="blog-single-image" />
+                <span class="post-image-caption">
+                    Clean layout and consistent visual hierarchy improve readability
+                </span>
+
                 <!-- Continued Content -->
-                <div class="post-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Animi
-                        necessitatibus error dolore dolorem, aut possimus libero saepe doloremque sequi
-                        consequatur non
-                        veritatis quidem enim minima
-                        totam. </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Animi sequi consequatur non veritatis quidem enim minima totam.
-                        sequi consequatur non veritatis enim minima totam. </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Quis esse laborum magnam dolorem excepturi fuga consequatur a cumque incidunt
-                        aspernatur. sequi consequatur non quidem enim minima totam. sequi consequatur non
-                        quidem enim minima totam. </p>
-                    <!-- Pagination -->
-                    <div class="pagination">
-                        <a class="prev-post" href="#prev"><i class="bi bi-arrow-left-short"></i>
-                            Previous Post</a>
-                        <a class="next-post" href="#next">Next Post <i class="bi bi-arrow-right-short"></i></a>
-                    </div>
-                    <!-- Comments Section -->
-                    <div class="comments">
-                        <h4 class="comments-title">Recent Comments </h4>
-                        <div class="comment">
-                            <div class="avatar">
-                                <img src="assets/images/user.png" class="image" alt="...">
-                            </div>
-                            <div class="comment-content">
-                                <ul class="comment-info">
-                                    <li><a href="#URL" class="comment-author">William Noah</a>
-                                        March 21, 2022 - 3:02 am
-                                    </li>
-                                    <li class="reply">
-                                        <a href="#reply" class="reply-btn"><i class="bi bi-reply-fill"></i> Reply</a>
-                                    </li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dolore esse praesentium officia commodi aut sint labore asperiores, veritatis tempore iure quos, voluptatem quas ad, saepe consequatur! Dignissimos, architecto facere.</p>
-                            </div>
+                <div class="post-content-body">
+                    <p>
+                        Performance plays a crucial role in modern web development. A fast-loading portfolio
+                        creates a better user experience and leaves a positive impression on visitors.
+                    </p>
+
+                    <p>
+                        Techniques such as image optimization, clean code practices, and minimizing unnecessary
+                        assets help improve overall performance without sacrificing design quality.
+                    </p>
+
+                    <p>
+                        By combining thoughtful design decisions with solid development practices, you can create
+                        a portfolio website that effectively represents your skills and professionalism.
+                    </p>
+                </div>
+                <!-- Pagination Links -->
+                <div class="post-pagination">
+                    <a class="post-prev" href="#prev"><i class="bi bi-arrow-left-short"></i> Previous Post</a>
+                    <a class="post-next" href="#next">Next Post <i class="bi bi-arrow-right-short"></i></a>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="post-comments">
+                    <h4 class="comments-title">Recent Comments</h4>
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="assets/images/demo/user.png" class="post-image" alt="...">
                         </div>
-                        <div class="comment">
-                            <div class="avatar">
-                                <img src="assets/images/user.png" class="image" alt="...">
-                            </div>
-                            <div class="comment-content">
-                                <ul class="comment-info">
-                                    <li><a href="#URL" class="comment-author">Benjamin</a>
-                                        March 22, 2022 - 6:00 am
-                                    </li>
-                                    <li class="reply">
-                                        <a href="#reply" class="reply-btn"><i class="bi bi-reply-fill"></i> Reply</a>
-                                    </li>
-                                </ul>
-                                <p>Ea consequuntur illum facere aperiam sequi optio consectetur adipisicing
-                                    elitFuga,
-                                    suscipit totam animi consequatur saepe blanditiis.Tempore saepe maxime illo
-                                    laborum
-                                    obcaecati.</p>
-                                <div class="comment-reply">
-                                    <a class="comment-avatar-sm" href="#">
-                                        <img src="assets/images/user.png" class="image" alt="...">
-                                    </a>
-                                    <div class="comment-content">
-                                        <ul class="comment-info">
-                                            <li><a href="#URL" class="comment-author">Isabella Luna</a>
-                                                March 22, 2022 - 12:06 pm
-                                            </li>
-                                            <li class="reply">
-                                                <a href="#reply" class="reply-btn"><i class="bi bi-reply-fill"></i> Reply</a>
-                                            </li>
-                                        </ul>
-                                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                            praesentium voluptatum deleniti atque corrupti.</p>
-                                    </div>
+                        <div class="comment-body">
+                            <ul class="comment-meta">
+                                <li><a href="#URL" class="comment-author">William Noah</a> March 21, 2022 - 3:02 am</li>
+                                <li class="reply">
+                                    <a href="#reply" class="reply-btn"><i class="bi bi-reply-fill"></i> Reply</a>
+                                </li>
+                            </ul>
+                            <p>This article provides a clear overview of what makes a portfolio effective. The focus on structure and performance is especially helpful.</p>
+                        </div>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-avatar">
+                            <img src="assets/images/demo/user.png" class="post-image" alt="...">
+                        </div>
+                        <div class="comment-body">
+                            <ul class="comment-meta">
+                                <li><a href="#URL" class="comment-author">Benjamin</a> March 22, 2022 - 6:00 am</li>
+                                <li class="reply">
+                                    <a href="#reply" class="reply-btn"><i class="bi bi-reply-fill"></i> Reply</a>
+                                </li>
+                            </ul>
+                            <p>Great insights on user experience and layout consistency. Planning before development really makes a difference.</p>
+                            <div class="comment-reply">
+                                <a class="comment-avatar-sm" href="#">
+                                    <img src="assets/images/demo/user.png" class="post-image" alt="...">
+                                </a>
+                                <div class="comment-body">
+                                    <ul class="comment-meta">
+                                        <li><a href="#URL" class="comment-author">Isabella Luna</a> March 22, 2022 - 12:06 pm</li>
+                                        <li class="reply">
+                                            <a href="#reply" class="reply-btn"><i class="bi bi-reply-fill"></i> Reply</a>
+                                        </li>
+                                    </ul>
+                                    <p>Very informative and easy to follow. The optimization section is a nice touch for developers.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Leave Comment Form -->
-                    <div class="form-comment" id="comment">
-                        <h4 class="form-title">Leave a comment </h4>
-                        <form action="#" method="post">
-                            <div class="input-group">
-                                <textarea name="Comment" class="input-field" placeholder="Your Comment" required=""
-                                    spellcheck="false"></textarea>
+                </div>
+                <!-- Leave Comment Form -->
+                <div class="comment-form" id="comment">
+                    <h4 class="comment-form-title">Leave a Comment</h4>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <textarea name="Comment" class="form-control" placeholder="Your Comment" required="" spellcheck="false"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="Name" class="form-control" placeholder="Your Name" required="">
                             </div>
-                            <div class="form-row">
-                                <div class="input-group">
-                                    <input type="text" name="Name" class="input-field" placeholder="Your Name"
-                                        required="">
-                                </div>
-                                <div class="input-group">
-                                    <input type="email" name="Email" class="input-field" placeholder="Email"
-                                        required="">
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" name="text" class="input-field" placeholder="URL"
-                                        required="">
-                                </div>
+                            <div class="form-group">
+                                <input type="email" name="Email" class="form-control" placeholder="Email" required="">
                             </div>
-                            <div class="form-submit">
-                                <button class="button">Post Comment</button>
+                            <div class="form-group">
+                                <input type="text" name="text" class="form-control" placeholder="URL" required="">
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="form-submit">
+                            <button class="btn-submit">Post Comment</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -242,7 +250,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2020. Designed by ProofHarata. All right reserved.</p>
+            <p>© 2020. Designed by ProofHarata. All rights reserved.</p>
         </div>
     </footer>
     <!-- Footer End -->
@@ -252,6 +260,5 @@
 
     <!-- JavaScript -->
     <script src="assets/js/global.js"></script>
-    <script src="assets/js/home.js"></script>
 </body>
 </html>
